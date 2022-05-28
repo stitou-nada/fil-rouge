@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Controller;
 use Database\Factories\CategoriesFactory;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/insérte', function () {
-    return view('pages.insérte');
+Route::get('/aa', function () {
+
+    
+    return view('pages.principal');
     });
 
+
+    route::get('/admin',Controller::class,"index");
    
-// Route::resource('admin', CategorieController::class);
+// Route::resource('admin', CategorieController::clsass);
 
