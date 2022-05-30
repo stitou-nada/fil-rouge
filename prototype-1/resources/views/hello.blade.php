@@ -2,16 +2,8 @@
 <h1>{{$wind}}</h1>
 
 
-
-
-@if ($wind <= 5){acha9ar}
-    
+@if ($wind > "4,12")
+    <h4>achakar<h4>
 @else
-@if ($wind == 5){hello}
-    
-@else
-no
-    
-@endif
-    
+<h4>playa<h4>
 @endif
