@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/insérte', function () {
+    return view('pages.insérte');
+    });
 
-Route::resource('admin', CategorieController::class);
+   
+// Route::resource('admin', CategorieController::class);
+
