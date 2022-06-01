@@ -148,7 +148,7 @@
             <main>
                 <div class="main-content">
                     <h1 class="titre text-center ">
-                   <strong>TABLEAU DES PRODUITS</strong>
+                   <strong>Insére les endroits</strong>
                    </h1>
                         <div class="section__content section__content--p30">
                             <div class="container-fluid">
@@ -157,7 +157,7 @@
                                         <div class="card">
         
                                             <!-- form -->
-                                            <div class="card-header">Ajouter le produit</div>
+                                            <div class="card-header">Ajouter l'endroit</div>
                                             <div class="card-body">
                                                 
                                                <form action="" method="POST">
@@ -168,7 +168,7 @@
                                                      <div class="row">
                                                         <div class="col-6">
                                                             <div class="form-group ">
-                                                                <label for="cc-exp" class="control-label mb-1">Produit</label>
+                                                                <label for="cc-exp" class="control-label mb-1">Name</label>
                                                                 <input id="cc-exp" name="nom_produit" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                                     data-val-cc-exp="Please enter a valid month and year"
                                                                     autocomplete="cc-exp">
@@ -176,9 +176,31 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
+                                                            <label for="cc-exp" class="control-label mb-1">Categorie</label>
+                                                            <select name="categorie_produit" id="select" class="form-control">
+                                                             
+                                                            <option selected>Select category</option>
+                       
+                                                              <option value=""> </option>
+                          
+                          
+                                                               
+                                                            </select>
+                                                            <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-6">
                                                             <div class="form-group">
-                                                                <label for="cc-exp" class="control-label mb-1">Prix</label>
-                                                                <input id="cc-exp" name="prix" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                <label for="cc-exp" class="control-label mb-1">Temperature</label>
+                                                                <input id="cc-exp" name="number" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                    data-val-cc-exp="Please enter a valid month and year" 
+                                                                    autocomplete="cc-exp">
+                                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label for="cc-exp" class="control-label mb-1">Video</label>
+                                                                <input id="cc-exp" name="number" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                                     data-val-cc-exp="Please enter a valid month and year" 
                                                                     autocomplete="cc-exp">
                                                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
@@ -186,47 +208,15 @@
                                                         </div>
                                                         
                                                     </div>
-                                                    <div class="form-group">
-                                                        <div class="row form-group">
-                                                           
-                                                        </div>
-                                                        <label for="cc-payment" class="control-label mb-1">Description</label>
-                                                        <textarea id="cc-pament" name="descriptiont" type="date" class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                                <label for="cc-exp" class="control-label mb-1">Categorie</label>
-                                                                <select name="categorie_produit" id="select" class="form-control">
-                                                                 
-                                                                <option selected>Select category</option>
-                           
-                              <option value=""> </option>
-                              
-                              
-                                                                   
-                                                                </select>
-                                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                       
+                                                        <div class="form-group">
+                                                            <div class="row form-group">
+                                                               
                                                             </div>
-                                                   
-                                                   
-                                                    <div class="row">
-                                                    <div class="col-6">
-                                                            <div class="form-group ">
-                                                                <label for="cc-exp" class="control-label mb-1">Expire Date</label>
-                                                                <input id="cc-exp" name="date_d'expiration" type="date" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
-                                                                    data-val-cc-exp="Please enter a valid month and year" 
-                                                                    autocomplete="cc-exp">
-                                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
-                                                            </div>
-                                                        </div>
-                                                    <div class="col-6">
-                                                            <div class="form-group ">
-                                                                <label for="cc-exp" class="control-label mb-1">Quantite de stock</label>
-                                                                <input id="cc-exp" name="quantite_stock" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
-                                                                    data-val-cc-exp="Please enter a valid month and year" 
-                                                                    autocomplete="cc-exp">
-                                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
-                                                            </div>
-                                                        </div>
+                                                            <label for="cc-payment" class="control-label mb-1">Description</label>
+                                                            <textarea id="cc-pament" name="description" type="text "class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
+                                                          </div>
+                                    
                                                         <div class="col-6">
                                                             <label for="x_card_code" class="control-label mb-1">Photo</label>
                                                             <i
