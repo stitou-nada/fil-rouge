@@ -7,6 +7,7 @@
 
     @include('pages.layouts.header')
         <div id="layoutSidenav_content">
+           
             <main>
                 
                 @yield('content')
@@ -14,9 +15,9 @@
             </main>
           @include('pages.layouts.footer') 
 
-        </div>
-    </div>  
-      
+          
+    </div>
+</div>
     
 
 </body>
