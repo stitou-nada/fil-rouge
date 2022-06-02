@@ -13,23 +13,25 @@
             <i class="fas fa-table me-1"></i>
             DataTable Example
         </div>
-        <div class="card-body">
+        <div class="card-body col-lg-10">
             <table id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>PHOTO</th>
-                        <th>ID</th>
                         <th>NAME</th>
-                        <th>ACTION</th>
+                        <th >ACTION</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                    @forelse ($categorie as $value)
+                    
+                
+
                     <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>
+                        <td style="width: 20%"><div class="uImg"><img src="img/{{$value ->photo_categorie}}" alt="" style="width: 100px"></div></td>
+                        <td >{{$value ->name_categorie}}</td>
+                        <td style="width: 20%">
                                 <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
                                         data-target="#labelModal"></i></a>
                                 <a href=""><i class="item-action fa fa-edit" data-toggle="modal"
@@ -40,7 +42,9 @@
                             
                         </td>
                     </tr>
-                   
+                    @empty
+                    
+                    @endforelse
                 </tbody>
             </table>
         </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PlaceController;
 use Database\Factories\CategoriesFactory;
 use Illuminate\Support\Facades\Route;
 
@@ -17,27 +18,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/inserte-endroit', function () {  
-    return view('pages.inserte-endroit');
-    });
-Route::get('/edit-endroit', function () {  
-    return view('pages.edit-endroit');
-    });
-Route::get('/inserte-categorie', function () {  
-    return view('pages.inserte-categorie');
-    });
-Route::get('/edit-categorie', function () {  
-    return view('pages.edit-categorie');
-    });
-Route::get('/tableau-endroit', function () {  
-    return view('pages.tableau-endroit');
-    });
-Route::get('/tableau-categorie', function () {  
-    return view('pages.tableau-categorie');
-    });
+// Route::get('/inserte-endroit', function () {  
+//     return view('pages.inserte-endroit');
+//     });
+// Route::get('/edit-endroit', function () {  
+//     return view('pages.edit-endroit');
+//     });
+// Route::get('/inserte-categorie', function () {  
+//     return view('pages.inserte-categorie');
+//     });
+// Route::get('/edit-categorie', function () {  
+//     return view('pages.edit-categorie');
+//     });
+// Route::get('/tableau-endroit', function () {  
+//     return view('pages.tableau-endroit');
+//     });
+// Route::get('/tableau-categorie', function () {  
+//     return view('pages.tableau-categorie');
+//     });
 
 
-    // route::get('/admin',Controller::class,"index");
+// route::get('/afficher',[CategorieController::class,'index']);
    
-// Route::resource('admin', CategorieController::clsass);
+Route::resource('afficher-categorie', CategorieController::class);
+Route::resource('afficher-endroit', PlaceController::class);
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PlaceController extends Controller
+class CategorieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +14,12 @@ class PlaceController extends Controller
      */
     public function index()
     {
-       $place= DB::table('places')
-       ->select('*')
-       ->join('categories','places.id_categorie','=' ,'categories.id_categorie')
-       ->get();
-       return view('pages.tableau-endroit', compact('place'));
+       
+        $categorie = DB::table('categories')
+        ->select("*")
+        ->get();
+        return view('pages.tableau-categorie' , compact('categorie'));
     }
-   
 
     /**
      * Show the form for creating a new resource.
@@ -29,7 +28,7 @@ class PlaceController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.tableau-endroit');
     }
 
     /**
