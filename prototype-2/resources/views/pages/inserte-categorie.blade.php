@@ -15,8 +15,11 @@
                         <div class="card-header">Ajouter Categorie </div>
                         <div class="card-body">
 
-                            <form action="" method="POST">
-                                <form action="" method="POST" novalidate="novalidate">
+                            
+                                <form action="{{route('afficher-categorie.store')}}" enctype="multipart/form-data"
+                                method="POST" novalidate="novalidate">
+                            
+                                @csrf
                                     <div class="row">
 
                                     </div>
@@ -24,7 +27,7 @@
                                         <div class="col-6">
                                             <div class="form-group ">
                                                 <label for="cc-exp" class="control-label mb-1">Nom</label>
-                                                <input id="cc-exp" name="nom_categorie" type="text"
+                                                <input id="cc-exp" name="name_categorie" type="text"
                                                     class="form-control cc-exp" value="" data-val="true"
                                                     data-val-required="Please enter the card expiration"
                                                     data-val-cc-exp="Please enter a valid month and year"
@@ -39,7 +42,7 @@
                                         <div class="col-6">
                                             <div class="form-group ">
                                                 <label for="cc-exp" class="control-label mb-1">Photo</label>
-                                                <input id="cc-exp" name="Description" type="file"
+                                                <input id="cc-exp" name="photo_categorie" type="file"
                                                     class="form-control cc-exp" value="" data-val="true"
                                                     data-val-required="Please enter the card expiration"
                                                     data-val-cc-exp="Please enter a valid month and year"
@@ -50,6 +53,11 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-6">
+                                        <p> 
+                                          .
+                                        </p>
+                                    </div>
                                     <div class="">
                                         <button class="btn btn-info au-btn--block " type="submit"> Ajouter </button>
 
@@ -57,7 +65,7 @@
                                     </div>
                         </div>
                         </form>
-                        </form>
+                       
                     </div>
                 </div>
                 <!-- fin -->

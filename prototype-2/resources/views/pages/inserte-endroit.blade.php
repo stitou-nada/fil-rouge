@@ -14,16 +14,19 @@
                             <div class="card-header">Ajouter l'endroit</div>
                             <div class="card-body">
                                 
-                               <form action="" method="POST">
-                                <form action="" method="POST" novalidate="novalidate">
-                                <div class="row">
+                            
+                                <form action="{{route('afficher-endroit.store')}}"  method="POST" novalidate="novalidate"   enctype="multipart/form-data">
+                                
+                                
+                                @csrf 
+                                   <div class="row">
                 
                                      </div>
                                      <div class="row">
                                         <div class="col-6">
                                             <div class="form-group ">
                                                 <label for="cc-exp" class="control-label mb-1">Name</label>
-                                                <input id="cc-exp" name="nom_produit" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                <input id="cc-exp" name="nom_place" type="text" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                     data-val-cc-exp="Please enter a valid month and year"
                                                     autocomplete="cc-exp">
                                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
@@ -77,8 +80,8 @@
                                                 class="fas fa-cloud-upload-alt tm-upload-icon">                                         </i>
                                             <div class="input-group">
                             
-                                                <input id="x_card_code"  value="UPLOAD PRODUCT IMAGE"
-                                                             type="file" name="image">
+                                                <input id="x_card_code"  value=""
+                                                             type="file" name="photo_place">
 
                                             </div>
                                         </div>   
@@ -89,7 +92,7 @@
                                       
                                     </div>
                                  </div>
-                                </form>
+                                
                                 </form>
                             </div>
                         </div>

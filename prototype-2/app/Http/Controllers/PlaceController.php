@@ -29,7 +29,8 @@ class PlaceController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.inserte-endroit');
+        
     }
 
     /**
@@ -40,7 +41,22 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nom = $request->input('nom_place');
+      
+      
+        if($request->hasfile('photo_place'))
+         {
+             $file = $request->file('photo_place');
+             $extenstion = $file->getClientOriginalExtension();
+             $filename = time().'.'.$extenstion;
+             $file->move('img', $filename);
+            $photo = $filename;
+         }
+         $inserte = DB::insert('insert into places(nom_place,photo_place) value(?,?)',[$nom,$photo]);
+         if($inserte){
+          return redirect('afficher-categorie');
+          
+       }
     }
 
     /**

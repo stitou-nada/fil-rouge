@@ -28,7 +28,7 @@ class CategorieController extends Controller
      */
     public function create()
     {
-        return view('pages.tableau-endroit');
+       return view('pages.inserte-categorie');
     }
 
     /**
@@ -39,7 +39,24 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $nom = $request->input('name_categorie');
+      
+      
+       if($request->hasfile('photo_categorie'))
+        {
+            $file = $request->file('photo_categorie');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('img', $filename);
+           $photo = $filename;
+        }
+       
+    //    $photo = $request->input('photo_categorie');
+       $inserte = DB::insert('insert into categories(name_categorie,photo_categorie) value(?,?)',[$nom,$photo]);
+      if($inserte){
+       return redirect('afficher-categorie');
+       
+    }
     }
 
     /**

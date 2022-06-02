@@ -41,8 +41,8 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="tableau-endroit">Tableau des endroits</a>
-                            <a class="nav-link" href="tableau-categorie">Tableau des categorie</a>
+                            <a class="nav-link" href="{{route('afficher-endroit.index')}}">Tableau des endroits</a>
+                            <a class="nav-link" href="{{route('afficher-categorie.index')}}">Tableau des categorie</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -52,8 +52,8 @@
                     </a>
                     <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="inserte-endroit">Ajouter endroit</a>
-                                    <a class="nav-link" href="inserte-categorie">Ajouter categorie</a>
+                                    <a class="nav-link" href="{{route('afficher-endroit.create')}}">Ajouter endroit</a>
+                                    <a class="nav-link" href="{{route('afficher-categorie.create')}}">Ajouter categorie</a>
                                 </nav>
                                
                             </a>
