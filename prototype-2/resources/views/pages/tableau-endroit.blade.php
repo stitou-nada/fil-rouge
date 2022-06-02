@@ -33,8 +33,15 @@
                         <td>Edinburgh</td>
                         <td>61</td>
                         <td>2011/04/25</td>
-                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt esse modi delectus quis? Repudiandae, cumque, ad incidunt commodi quidem </td>
-                        <td>$320,800</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
+                        <td>                        
+                            <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
+                                    data-target="#labelModal"></i></a>
+                            <a href=""><i class="item-action fa fa-edit" data-toggle="modal"
+                                    data-target="#labelModal"></i></a>
+                            <a href=""> <i class="item-action fa fa-trash" data-toggle="modal"
+                                    data-target="#deleteItemModal"></i></a>
+                    </td>
                     </tr>
                    
                 </tbody>

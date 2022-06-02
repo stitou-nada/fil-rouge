@@ -29,7 +29,16 @@
                         <td>Tiger Nixon</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
-                        <td>$320,800</td>
+                        <td>
+                                <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
+                                        data-target="#labelModal"></i></a>
+                                <a href=""><i class="item-action fa fa-edit" data-toggle="modal"
+                                        data-target="#labelModal"></i></a>
+                                <a href=""> <i class="item-action fa fa-trash" data-toggle="modal"
+                                        data-target="#deleteItemModal"></i></a>
+                                    
+                            
+                        </td>
                     </tr>
                    
                 </tbody>
