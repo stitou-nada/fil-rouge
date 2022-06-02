@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/create-endroit', function () {  
-    return view('pages.create');
+Route::get('/inserte-endroit', function () {  
+    return view('pages.inserte-endroit');
     });
 Route::get('/edit-endroit', function () {  
     return view('pages.edit-endroit');
@@ -28,6 +28,12 @@ Route::get('/inserte-categorie', function () {
     });
 Route::get('/edit-categorie', function () {  
     return view('pages.edit-categorie');
+    });
+Route::get('/tableau-endroit', function () {  
+    return view('pages.tableau-endroit');
+    });
+Route::get('/tableau-categorie', function () {  
+    return view('pages.tableau-categorie');
     });
 
 
