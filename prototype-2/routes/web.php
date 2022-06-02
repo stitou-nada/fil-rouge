@@ -17,14 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/aa', function () {
-
-    
-    return view('pages.principal');
+Route::get('/create-endroit', function () {  
+    return view('pages.create');
+    });
+Route::get('/edit-endroit', function () {  
+    return view('pages.edit-endroit');
+    });
+Route::get('/inserte-categorie', function () {  
+    return view('pages.inserte-categorie');
+    });
+Route::get('/edit-categorie', function () {  
+    return view('pages.edit-categorie');
     });
 
 
-    route::get('/admin',Controller::class,"index");
+    // route::get('/admin',Controller::class,"index");
    
 // Route::resource('admin', CategorieController::clsass);
 

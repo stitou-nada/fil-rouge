@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('pages.layouts.head');
+@include('pages.layouts.head')
 
 <body>
 

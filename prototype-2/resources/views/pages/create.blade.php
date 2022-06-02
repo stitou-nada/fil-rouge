@@ -74,8 +74,7 @@
                                         <div class="col-6">
                                             <label for="x_card_code" class="control-label mb-1">Photo</label>
                                             <i
-                                                class="fas fa-cloud-upload-alt tm-upload-icon"                    
-          >                                         </i>
+                                                class="fas fa-cloud-upload-alt tm-upload-icon">                                         </i>
                                             <div class="input-group">
                             
                                                 <input id="x_card_code"  value="UPLOAD PRODUCT IMAGE"
