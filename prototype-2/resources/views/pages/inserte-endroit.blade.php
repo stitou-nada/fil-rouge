@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-content">
     <h1 class="titre text-center ">
-   <strong>Insére les endroits</strong>
+   <strong>Ajouter les endroits</strong>
    </h1>
         <div class="section__content section__content--p30">
             <div class="container-fluid">

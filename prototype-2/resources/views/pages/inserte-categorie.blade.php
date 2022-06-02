@@ -3,7 +3,7 @@
 <!-- MAIN CONTENT-->
        <div class="main-content">
         <h1 class="titre text-center ">
-       <strong>Categories</strong>
+       <strong>Ajouter Categories</strong>
        </h1>
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
