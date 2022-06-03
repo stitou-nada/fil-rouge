@@ -78,7 +78,13 @@ class CategorieController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit = DB::table('categories')
+        ->select('*')
+        ->where('id_categorie',$id)
+        ->get();
+        
+        return view('pages.edit-categorie', compact('edit'));
+
     }
 
     /**
@@ -90,7 +96,26 @@ class CategorieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $name=$request->input('name_categorie');
+
+
+       if ( $request->hasFile('photo_categorie')) {
+        $file = $request->file('photo_categorie');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('img', $filename);
+            $image = $filename;
+         }
+       else{
+           $image= $request->input("img");
+      } 
+      
+      $modifier=DB::table('categories')
+      ->where('id_categorie',$id)
+      ->update(['name_categorie'=>$name, 'photo_categorie'=>$image]);
+      
+      return redirect('afficher-categorie');
+
     }
 
     /**

@@ -25,16 +25,20 @@
                                     <div class="col-xl-6 col-lg-12 col-md-12">
 
                                         <!-- start modifier -->
-
-                                        <form method="POST" enctype='multipart/form-data'
+                                        @forelse ($edit as $value)
+                                        <form method="POST" action="{{route('afficher-categorie.update',$value->id_categorie)}}" enctype='multipart/form-data'                               
                                             class="tm-edit-product-form">
+                                            @method("put")
+                                             @csrf
+                                          
+                                                
+                                           
                                             <div class="form-group mb-3">
-                                                <input type="hidden" name="id" value="">
-                                                <label for="name">Name
-                                                </label>
-                                                <input id="name" name="nom_produit" type="text"
+                                                <input type="hidden"name="id" value="{{$value->id_categorie}}">
+                                                <label for="">Name</label>
+                                                <input id="name" name="name_categorie" type="text"
                                                     class="form-control validate" required
-                                                    value="">
+                                                    value="{{$value->name_categorie}}">
                                             </div>
                                            
             
@@ -44,19 +48,22 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 ">
                                         <div class=" mx-auto">
-                                            <img src="img/ZZZ.PNG"
+                                            <img src="{{asset('img')}}/{{$value->photo_categorie}}"
                                                 class="tm-product-img-dummy mx-auto" alt="">
                                         </div>
                                         <div class="custom-file mt-3 mb-3">
-
+                                            <input type="hidden"name="img"  value="{{$value->photo_categorie}}">
                                             <input class="btn btn-primary btn-block mx-auto col-lg-6"
-                                                value="UPLOAD PRODUCT IMAGE" type="file" name="image" />
+                                                value="" type="file" name="photo_categorie" />
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <button type="submit"
                                             class="btn btn-primary btn-block text-uppercase">Ajouter</button>
                                     </div>
+                                    @empty
+                                                
+                                    @endforelse
                                     </form>
                                 </div>
                             </div>
