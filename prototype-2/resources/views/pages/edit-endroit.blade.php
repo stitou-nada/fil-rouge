@@ -25,57 +25,67 @@
                                     <div class="col-xl-6 col-lg-12 col-md-12">
 
                                         <!-- start modifier -->
+                                        @forelse ($edit as $value)
+    
 
-                                        <form method="POST" enctype='multipart/form-data'
+                                        <form method="POST" action="{{route('afficher-endroit.update',$value->id_places)}}" enctype='multipart/form-data'
                                             class="tm-edit-product-form">
+                                            @method('PUT')
+                                            @csrf
                                             <div class="form-group mb-3">
                                                 <input type="hidden" name="id" value="">
                                                 <label for="name">Name
                                                 </label>
-                                                <input id="name" name="nom_produit" type="text"
+                                                <input id="name" name="nom_place" type="text"
                                                     class="form-control validate" required
-                                                    value="">
+                                                    value="{{$value->nom_place}}">
                                             </div>
-                                            <div class="form-group mb-3">
-                                                <label for="category">Categorie</label>
-                                                <select class="custom-select tm-select-accounts"
-                                                    id="category" name="categorie_produit">
-
-                                                    <option selected></option>
-
-
-                                                    <option value=""></option>
-
-
+                                            <div class="col-6">
+                                                <label for="cc-exp" class="control-label mb-1">Categorie</label>
+                                                <select name="id_categorie" id="select" class="form-control">                                    
+                                                <option selected value="{{$value->id_categorie}}">{{$value->name_categorie}}</option>
+                                                
+                                                @forelse ($categorie as $valuee)
+                                                     
+                                                    
+                                                  <option value="{{$valuee->id_categorie}}">{{$valuee->name_categorie}} </option>
+              
+              
+                                                  @empty
+                                                     
+                                                  @endforelse
                                                 </select>
+                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label for="description">Temperature</label>
                                                 <input class="form-control validate" rows="3" required
-                                                    name="description" value="">
+                                                    name="tumperature_place" value="{{$value->tumperature_place}}">
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label for="description">Description</label>
                                                 <input class="form-control validate" rows="3" required
-                                                    name="description" value="">
+                                                    name="description_place" value="{{$value->description_place}}">
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label for="description">Video</label>
                                                 <input class="form-control validate" rows="3" required
-                                                  type="url"  name="description" value="">
+                                                  type="url"  name="video_place" value="{{$value->video_place}}">
                                             </div>
                                            
 
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 ">
                                         <div class=" mx-auto">
-                                            <img src="img/ZZZ.PNG"
+                                            <img src="{{asset('img')}}/{{$value->photo_place}}"
                                                 class="tm-product-img-dummy mx-auto" alt="">
                                         </div>
                                         <div class="custom-file mt-3 mb-3">
 
                                             <input class="btn btn-primary btn-block mx-auto col-lg-6"
-                                                value="UPLOAD PRODUCT IMAGE" type="file" name="image" />
+                                                 type="hidden" name="img" value="{{$value->photo_place}}"/>
+                                            <input class="btn btn-primary btn-block mx-auto col-lg-6"
+                                                 type="file" name="photo_place" />
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -83,6 +93,9 @@
                                             class="btn btn-primary btn-block text-uppercase">Ajouter</button>
                                     </div>
                                     </form>
+                                    @empty
+    
+                                    @endforelse
                                 </div>
                             </div>
 

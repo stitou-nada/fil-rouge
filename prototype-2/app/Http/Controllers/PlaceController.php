@@ -86,7 +86,17 @@ class PlaceController extends Controller
      */
     public function edit($id)
     {
-        //
+      $edit=DB::table('places')
+      ->where('id_places',$id)
+      ->join('categories','places.id_categorie','=' ,'categories.id_categorie')
+      ->select('*')
+      ->get();
+
+      $categorie = DB::table('categories')
+        ->select("*")
+        ->get();
+      return view('pages.edit-endroit', compact('edit',"categorie"));
+
     }
 
     /**
@@ -98,7 +108,29 @@ class PlaceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $nom = $request->input('nom_place');
+        $id_categorie= $request->input('id_categorie');
+        $temperature = $request->input('tumperature_place');
+        $description = $request->input('description_place');
+        $video = $request->input('video_place');
+
+        if ( $request->hasFile('photo_place')) {
+            $file = $request->file('photo_place');
+                $extenstion = $file->getClientOriginalExtension();
+                $filename = time().'.'.$extenstion;
+                $file->move('img', $filename);
+                $image = $filename;
+             }
+           else{
+               $image= $request->input("img");
+          }
+
+       DB::table('places')
+       ->where('id_places',$id)
+       -> update(['nom_place'=>$nom,'id_categorie'=>$id_categorie,'tumperature_place'=> $temperature,'description_place'=>$description ,'video_place'=>$video ,'photo_place'=>$image]); 
+
+
+       return redirect('afficher-endroit');
     }
 
     /**
