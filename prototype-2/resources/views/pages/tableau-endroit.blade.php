@@ -37,12 +37,18 @@
                         <td>{{$value->description_place}}</td>
                         <input type="hidden" value="{{$value->video_place}}">
                         <td>                        
-                            <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
-                                    data-target="#labelModal"></i></a>
+                            {{-- <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
+                                    data-target="#labelModal"></i></a> --}}
                             <a href="{{route('afficher-endroit.edit',$value->id_places)}}"><i class="item-action fa fa-edit" data-toggle="modal"
                                     data-target="#labelModal"></i></a>
-                            <a href=""> <i class="item-action fa fa-trash" data-toggle="modal"
-                                    data-target="#deleteItemModal"></i></a>
+                            
+                                    <form action="{{route('afficher-endroit.destroy',$value->id_places)}}" method="POST">
+                                        @csrf
+                                  @method("DELETE")
+                                  <button> <i class="item-action fa fa-trash" data-toggle="modal"
+                                          data-target="#deleteItemModal"></i></button>
+                              
+                                      </form>
                     </td>
                     </tr>
                     @empty

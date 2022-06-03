@@ -141,6 +141,9 @@ class PlaceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('places')
+        ->where('id_places',$id)
+        ->delete();
+        return redirect('afficher-endroit');
     }
 }

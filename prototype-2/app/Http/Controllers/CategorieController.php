@@ -126,6 +126,11 @@ class CategorieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('categories')
+        ->where('id_categorie',$id)
+        ->delete();
+
+        return redirect('afficher-categorie');
+       
     }
 }

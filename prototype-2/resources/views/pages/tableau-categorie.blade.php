@@ -31,14 +31,19 @@
                     <tr>
                         <td style="width: 20%"><div class="uImg"><img src="img/{{$value ->photo_categorie}}" alt="" style="width: 100px"></div></td>
                         <td >{{$value ->name_categorie}}</td>
-                        <td style="width: 20%">
-                                <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
-                                        data-target="#labelModal"></i></a>
+                        <td style="width: 6%">
+                                {{-- <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
+                                        data-target="#labelModal"></i></a> --}}
                                 <a href="{{route('afficher-categorie.edit',$value->id_categorie)}}"><i class="item-action fa fa-edit" data-toggle="modal"
                                         data-target="#labelModal"></i></a>
-                                <a href=""> <i class="item-action fa fa-trash" data-toggle="modal"
-                                        data-target="#deleteItemModal"></i></a>
-                                    
+                               
+                               <form action="{{route('afficher-categorie.destroy',$value->id_categorie)}}" method="POST">
+                                      @csrf
+                                @method("DELETE")
+                                <button> <i class="item-action fa fa-trash" data-toggle="modal"
+                                        data-target="#deleteItemModal"></i></button>
+                            
+                                    </form>
                             
                         </td>
                     </tr>
