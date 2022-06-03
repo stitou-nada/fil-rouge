@@ -110,7 +110,7 @@ class CategorieController extends Controller
            $image= $request->input("img");
       } 
       
-      $modifier=DB::table('categories')
+      DB::table('categories')
       ->where('id_categorie',$id)
       ->update(['name_categorie'=>$name, 'photo_categorie'=>$image]);
       
