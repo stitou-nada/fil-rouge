@@ -29,7 +29,11 @@ class PlaceController extends Controller
      */
     public function create()
     {
-        return view('pages.inserte-endroit');
+        $categorie =DB::table('categories')
+        ->select('id_categorie','name_categorie')
+        ->get();
+
+        return view('pages.inserte-endroit', compact('categorie'));
         
     }
 
@@ -42,7 +46,10 @@ class PlaceController extends Controller
     public function store(Request $request)
     {
         $nom = $request->input('nom_place');
-      
+        $video = $request->input('video_place');
+        $description = $request->input('description_place');
+        $temperature = $request->input('tumperature_place');
+        $id_categorie= $request->input('id_categorie');
       
         if($request->hasfile('photo_place'))
          {
@@ -52,11 +59,12 @@ class PlaceController extends Controller
              $file->move('img', $filename);
             $photo = $filename;
          }
-         $inserte = DB::insert('insert into places(nom_place,photo_place) value(?,?)',[$nom,$photo]);
+         $inserte = DB::insert('insert into places(nom_place,photo_place,video_place,description_place,tumperature_place,id_categorie) value(?,?,?,?,?,?)',[$nom,$photo,$video,$description,$temperature,$id_categorie]);
          if($inserte){
-          return redirect('afficher-categorie');
+          return redirect('afficher-endroit');
           
        }
+
     }
 
     /**

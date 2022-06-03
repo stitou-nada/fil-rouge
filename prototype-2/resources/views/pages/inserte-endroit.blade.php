@@ -34,21 +34,23 @@
                                         </div>
                                         <div class="col-6">
                                             <label for="cc-exp" class="control-label mb-1">Categorie</label>
-                                            <select name="categorie_produit" id="select" class="form-control">
-                                             
+                                            <select name="id_categorie" id="select" class="form-control">                                    
                                             <option selected>Select category</option>
-       
-                                              <option value=""> </option>
+                                             @forelse ($categorie as $value)
+                                                 
+                                              <option value="{{$value->id_categorie}}">{{$value->name_categorie}} </option>
           
           
-                                               
+                                              @empty
+                                                 
+                                              @endforelse
                                             </select>
                                             <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label for="cc-exp" class="control-label mb-1">Temperature</label>
-                                                <input id="cc-exp" name="number" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                <input id="cc-exp" name="tumperature_place" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                     data-val-cc-exp="Please enter a valid month and year" 
                                                     autocomplete="cc-exp">
                                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
@@ -57,7 +59,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label for="cc-exp" class="control-label mb-1">Video</label>
-                                                <input id="cc-exp" name="number" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                <input id="cc-exp" name="video_place" type="url" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
                                                     data-val-cc-exp="Please enter a valid month and year" 
                                                     autocomplete="cc-exp">
                                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
@@ -71,7 +73,7 @@
                                                
                                             </div>
                                             <label for="cc-payment" class="control-label mb-1">Description</label>
-                                            <textarea id="cc-pament" name="description" type="text "class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
+                                            <textarea id="cc-pament" name="description_place" type="text "class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
                                           </div>
                     
                                         <div class="col-6">

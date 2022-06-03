@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4">Tableau des endroit</h1>
     <ol class="breadcrumb mb-3">
-        <li class="breadcrumb-item"><a href="pages.inserte-endroit">Ajouter endroit</a></li>
+        <li class="breadcrumb-item"><a href="{{route('afficher-endroit.create')}}">Ajouter endroit</a></li>
         <li class="breadcrumb-item active">Tables</li>
     </ol>
     
@@ -35,6 +35,7 @@
                         <td>{{$value->tumperature_place}}</td>
                         <td>{{$value->name_categorie}}</td>
                         <td>{{$value->description_place}}</td>
+                        <input type="hidden" value="{{$value->video_place}}">
                         <td>                        
                             <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
                                     data-target="#labelModal"></i></a>
