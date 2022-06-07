@@ -45,7 +45,7 @@
                                                  
                                               @endforelse
                                             </select>
-                                            <span class="help-block" ²data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                            <span class="help-block" ²  data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
