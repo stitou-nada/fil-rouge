@@ -14,6 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
+
+       
+
+
            $table->renameColumn('description_categories','photo_categorie');
         });
     }

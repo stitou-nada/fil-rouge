@@ -32,12 +32,12 @@ return new class extends Migration
             $table->string('video_place')->nullable();
             $table->string('description_place')->nullable();
             $table->string('tumperature_place')->nullable();
-            $table->unsignedInteger("id_categorie")->nullable(); //Unique key
             $table->timestamps();
+            $table->unsignedInteger("id_categorie")->nullable(); //Unique key
             $table->foreign('id_categorie')
             ->references('id_categorie')
             ->on('categories')
-            ->onDelete('cascade');;
+            ->onDelete('cascade');
             
         });
 
