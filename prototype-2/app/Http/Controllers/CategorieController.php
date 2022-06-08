@@ -47,7 +47,7 @@ class CategorieController extends Controller
             $file = $request->file('photo_categorie');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('img', $filename);
+            $file->move('Simg', $filename);
            $photo = $filename;
         }
        
