@@ -32,7 +32,6 @@ class PlaceController extends Controller
         $categorie =DB::table('categories')
         ->select('id_categorie','name_categorie')
         ->get();
-
         return view('pages.inserte-endroit', compact('categorie'));
         
     }
@@ -45,12 +44,11 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
-        $nom = $request->input('nom_place');
-        $video = $request->input('video_place');
-        $description = $request->input('description_place');
-        $temperature = $request->input('tumperature_place');
-        $id_categorie= $request->input('id_categorie');
-      
+        $nom=$request->input('nom_place');
+        $video=$request->input('video_place');
+        $temperature=$request->input('tumperature_place');
+        $description=$request->input('description_place');
+        $id_categorie=$request->input('id_categorie');
         if($request->hasfile('photo_place'))
          {
              $file = $request->file('photo_place');
@@ -88,10 +86,9 @@ class PlaceController extends Controller
     {
       $edit=DB::table('places')
       ->where('id_places',$id)
-      ->join('categories','places.id_categorie','=' ,'categories.id_categorie')
       ->select('*')
+      ->join("categories","places.id_categorie","=",'categories.id_categorie')
       ->get();
-
       $categorie = DB::table('categories')
         ->select("*")
         ->get();
@@ -141,9 +138,11 @@ class PlaceController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('places')
-        ->where('id_places',$id)
-        ->delete();
-        return redirect('afficher-endroit');
+     $inserte=DB::table('places')
+      ->where('id_places',$id)
+      ->delete();
+      if ($inserte) {
+         return redirect('afficher-endroit');
+      }
     }
 }
