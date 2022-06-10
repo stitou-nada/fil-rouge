@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\placesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+route::get('/index',[placesController::class,'afficher_categories']);
+route::get('/categorie/{id}',[placesController::class,'afficher_categories']);

@@ -3,8 +3,45 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class placesController extends Controller
 {
-    //
+    
+
+    function afficher_categories(){
+
+        $categories=  DB::table('categories')
+          ->select("*")
+          ->get();
+        
+          return view("pages.home",compact("categories"));
+      }
+  
+      function afficher_places_id($id){
+  
+      $places = DB::table('places')
+      ->select('*')
+      ->where("places.id_categorie",$id)
+      ->join("categories","places.id_categorie",'=',"categories.id_categorie")
+      ->get();
+      return view('pages.categorie',compact("places"));
+
+       
+
+      
+
+    
+
+      }
+
+
+      
+    
+  
+    
+  
+  
+    
+  
 }
