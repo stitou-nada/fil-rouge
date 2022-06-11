@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/index', function () {
+    return view('pages.index');
 });
 
 
 
-route::get('/index',[placesController::class,'afficher_categories']);
-route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
+// route::get('/index',[placesController::class,'afficher_categories']);
+// route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
