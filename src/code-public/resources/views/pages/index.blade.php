@@ -27,15 +27,7 @@
 <!--start middle section-->
 <!-- start Experience Travel With Us -->
 <section class="padding position-relative margin-top parallax parallax-image-2">
-<!-- shape-two -->
-<div class="shape-image-two">
-    <img src="assets/images/background-shape/dottd-squre.png" class="img-fluid" alt="the background decorated dotted square image">
-</div>
-<!--End shape-two -->
 <div class="container">
-    <!-- shape-three -->
-    
-    <!--End shape-three -->
     <!-- HEADING TITLE -->
     <div class="trheading wow fadeInDown" data-wow-duration="2s" data-wow-delay=".4s">
         <h2>selectionné<br>
@@ -44,50 +36,20 @@
     <!-- start image content -->
     
 <!-- start image content -->
-<div class="slider category-slider">
+ <div class="slider category-slider">
+    @forelse ($categories as $value)
 <div class="trCategoryItem">
-    <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-1.png" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Mountain</a> </div>
-    </div>
-</div>
-<div class=" trCategoryItem">
-    <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-2.png" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Waterfall</a></div>
-    </div>
+        
     
-</div>
-<div class=" trCategoryItem">
     <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-3.png" class="img-fluid"
+        <img src="assets/images/categorie/{{$value->photo_categorie}}" class="img-fluid"
              alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Snow</a></div>
+        <div class="trCategoryButton"><a href="javascript:void(0);">{{$value->name_categorie}}</a> </div>
     </div>
 </div>
-<div class=" trCategoryItem">
-    <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-4.png" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Nature</a></div>
-    </div>
-</div>
-<div class=" trCategoryItem">
-    <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-1.png" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Mountain</a></div>
-    </div>
-</div>
-<div class=" trCategoryItem">
-    <div class="tr-image-class">
-        <img src="assets/images/category-slider/category-image-2.png" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">Waterfall</a></div>
-    </div>
-</div>
+@empty
+        
+    @endforelse
 </div>
 </div>
 <!-- shape-four -->

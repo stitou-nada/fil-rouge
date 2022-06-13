@@ -15,7 +15,7 @@ class placesController extends Controller
           ->select("*")
           ->get();
         
-          return view("pages.home",compact("categories"));
+          return view("pages.index",compact("categories"));
       }
   
       function afficher_places_id($id){
