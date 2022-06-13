@@ -20,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
- route::get('/index',[placesController::class,'afficher_categories','tempurature']);
+//  route::get('/index',[placesController::class,'afficher_categories','tempurature']);
+//   route::get('/index',[tempuratureController::class,'fetch_API']);
 
-//  route::get('/index',[tempuratureController::class,'fetch_API']);
+
+    route::get('/indexx',[placesController::class,'afficher_categories'])->name('index');
+    route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
+
+
+
 // route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
