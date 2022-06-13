@@ -28,7 +28,7 @@
                             </li>
                             <li class="nav-item tr-nav-item"><a class="nav-link" href="#Destination">À-propos </a>
                             </li>
-                            <li class="nav-item tr-nav-item"><a class="nav-link" href="#Stories">Categories</a>
+                            <li class="nav-item tr-nav-item"><a class="nav-link" href="#categorie">Categories</a>
                             </li>
                             
                         </ul>

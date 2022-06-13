@@ -16,7 +16,7 @@
                         </a>
                         <p class="trFooter-desc">Tanger est une ville du nord du Maroc, considérée comme la capitale marocaine du 
                             détroit de Gibraltar et la porte d'entrée du continent africain.</p>
-                        <div class="trFooter-conatct"><a href="javascript:void(0);">+0123 456 789</a>
+                        <div class="trFooter-conatct"><a href="javascript:void(0);"></a>
                         
                         </div>
                         <div class="Footer-socialicon">

@@ -1,14 +1,16 @@
 @extends('pages.principal')
 @section('content')
+
 <section style="background-image: url('assets/images/img-about/17.jpg');" class="padding trmain-slider" id="TripPlanner">
             
     <div  class="container trtop-baner-content">
         <div  class="row">
-            <div class="col-12 col-sm-11 col-md-9 col-lg- col-xl-7">
+            <div class="col-12 col-sm-11 col-md-9 col-lg- col-xl-12">
                 <div class="siider-content">
                     <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">les suggestions<br>
                         des endroits touristiques à Tanger.</h1>
-                        <p class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">Une ville portuaire embrassée par la mer et l'océan
+                        <p style=" padding-right: 250px !important;
+                        padding-left: 300px !important;padding-top: 50px;" class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">Une ville portuaire embrassée par la mer et l'océan
                             Un lieu de rencontre pour trois cultures - africaine, marocaine et européenne
                          </p>
                         <!-- <form class="tr-slider-form wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
@@ -21,16 +23,109 @@
             </div>
         </div>
     </div>
-   
+   <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
 </section>
 </div>
+<br>
+<div class="col-lg-8 grid-margin stretch-card">
+    <!--weather card-->
+    <div class="card card-weather">
+      <div class="card-body">
+        <div class="weather-date-location">
+          <h3>{{$name}}</h3>
+          <p class="text-gray">
+            <span class="weather-date">25 March, 2019</span>
+            <span class="weather-location">Sydney, Australia</span>
+          </p>
+        </div>
+        <div class="weather-data d-flex">
+          <div class="mr-auto">
+            <h4 class="display-3">32
+              <span class="symbol">&deg;</span>C</h4>
+            <p>
+              Cloudy
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <div class="d-flex weakly-weather">
+          <div class="weakly-weather-item">
+            <p class="mb-0">
+              Sun
+            </p>
+            <i class="mdi mdi-weather-cloudy"></i>
+            <p class="mb-0">
+              30&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Mon
+            </p>
+            <i class="mdi mdi-weather-hail"></i>
+            <p class="mb-0">
+              31&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Tue
+            </p>
+            <i class="mdi mdi-weather-partlycloudy"></i>
+            <p class="mb-0">
+              28&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Wed
+            </p>
+            <i class="mdi mdi-weather-pouring"></i>
+            <p class="mb-0">
+              30&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Thu
+            </p>
+            <i class="mdi mdi-weather-pouring"></i>
+            <p class="mb-0">
+              29&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Fri
+            </p>
+            <i class="mdi mdi-weather-snowy-rainy"></i>
+            <p class="mb-0">
+              31&deg;
+            </p>
+          </div>
+          <div class="weakly-weather-item">
+            <p class="mb-1">
+              Sat
+            </p>
+            <i class="mdi mdi-weather-snowy"></i>
+            <p class="mb-0">
+              32&deg;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--weather card ends-->
+  </div>
+
 <!--start middle section-->
 <!-- start Experience Travel With Us -->
 <section class="padding position-relative margin-top parallax parallax-image-2">
 <div class="container">
     <!-- HEADING TITLE -->
     <div class="trheading wow fadeInDown" data-wow-duration="2s" data-wow-delay=".4s">
-        <h2>selectionné<br>
+        <h2 id="categorie">selectionné<br>
             categorie</h2>
     </div>
     <!-- start image content -->
@@ -152,34 +247,28 @@
 <div class="container">
     <!-- HEADING TITLE -->
     
-    
-
     <div class="position-relative wow fadeIn" data-wow-duration="2s" data-wow-delay=".4s">
         <!-- start image content -->
         <div class="slider Trip-slider">
             <div class=" trTripItem">
                 <div class="trTripContent-image" style="background: url(assets/images/img-about/15.jpg) no-repeat; background-size: cover;">
                     <!-- video tag  -->
-                    <iframe controls width="500" height="500" autoplay>
-                        <source  src="https://www.youtube.com/watch?v=dmn8i_nocrA" type="url">
-                    </iframe>
+                   
 
-                    <!-- iframe video -->
-                    <!-- <iframe class="vid" id="yt" width="727" height="600" src="https://www.youtube.com/embed/7oDb-6kHXZo?autoplay=1" allowfullscreen allow="autoplay"></iframe> -->
+                   
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/iSYteEgwOXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  allow="autoplay"></iframe>
+
 
                     <!-- play button -->
                     <a class="play-button" href="#"> <i class="fas fa-play"></i></a>
                 </div>
             </div>
             <div class="trTripItem">
-                <div class="trTripContent-image" style="background: url(assets/images/trip-images/trip-1.png) no-repeat; background-size: cover;">
+                <div class="trTripContent-image" style="background: url(assets/images/img-about/1.jpg) no-repeat; background-size: cover;">
                     <!-- video tag  -->
-                    <video controls width="500" height="500" autoplay>
-                        <source src="assets/videos/dummy_video-2.mp4" type="video/mp4">
-                    </video>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-Qu_DhpQmWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                    <!-- iframe video -->
-                    <!-- <iframe class="vid" id="yt" width="727" height="600" src="https://www.youtube.com/embed/7oDb-6kHXZo?autoplay=1" allowfullscreen allow="autoplay"></iframe> -->
+                    
 
                     <!-- play button -->
                     <a class="play-button" href="#"> <i class="fas fa-play"></i></a>

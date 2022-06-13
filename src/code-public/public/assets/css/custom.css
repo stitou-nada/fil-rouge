@@ -815,15 +815,19 @@ span {
 	top: 0;
 }
 .siider-content p {
-	font-size: 24px;
-	color: #e7dddd;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center !important;
+   
+
 }
 .siider-content h1 {
 	font-size: 48px;
 	font-weight: 800;
-	color: #d6d7e0;
+	color: #ffffff;
 	margin-bottom: 90px;
 	line-height: 60px;
+	text-align: center !important;
 	
 }
 .tr-form-button {
