@@ -15,17 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/index', function (){
-//     return view('pages.index');
-// });
+Route::get('/endroits', function (){
+    return view('pages.endroits');
+});
 
 
 //  route::get('/index',[placesController::class,'afficher_categories','tempurature']);
 //   route::get('/index',[tempuratureController::class,'fetch_API']);
 
 
-    route::get('/indexx',[placesController::class,'afficher_categories'])->name('index');
-    route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
+    // route::get('/indexx',[placesController::class,'afficher_categories'])->name('index');
+    // route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
 
 
 

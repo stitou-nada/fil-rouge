@@ -4,14 +4,14 @@
 
 <body data-spy="scroll" data-target="#myHeader">
 <!-- Preloader -->
-<div class="preloader">
+{{-- <div class="preloader">
     <div class="main-circle">
       <div class="second-circle">
         <div class="third-circle">  
         </div>
       </div>
     </div>
-</div>    
+</div>     --}}
 
 <div id="wrap">
 <!-- Page Wrapper -->

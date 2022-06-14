@@ -13,5 +13,17 @@
     <link rel="stylesheet" href="{{asset('assets/css/slick-slider/slick.css')}}" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/media-query.css')}}">
+
+    <!-- css akhor -->
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+<link rel="stylesheet" href="{{asset('assets/css2/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css2/fonts.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css2/style.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css2/styles1.css')}}">
+<!-- fin css akhor -->
     <title>Advento - landing page</title>
 </head>
