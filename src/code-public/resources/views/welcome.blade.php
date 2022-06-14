@@ -1,3 +1,16 @@
+
+ {{-- Schema::create('galerie', function (Blueprint $table) {
+    $table->increments("id_galerie");
+    $table->string("photos_place")->nullable(); //Unique key
+    $table->string("videos_place")->nullable(); //Unique key
+    $table->unsignedInteger("id_place")->nullable(); //Unique key
+    $table->foreign('id_place')
+    ->references('id_places')
+    ->on('places')
+    ->onDelete('cascade');
+    $table->timestamps();
+
+}); --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

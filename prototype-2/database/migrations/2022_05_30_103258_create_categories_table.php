@@ -16,30 +16,16 @@ return new class extends Migration
 
 
 
-        Schema::create('galerie', function (Blueprint $table) {
-            $table->increments("id_galerie");
-            $table->string("photos_place")->nullable(); //Unique key
-            $table->string("videos_place")->nullable(); //Unique key
-            $table->unsignedInteger("id_place")->nullable(); //Unique key
-            $table->foreign('id_place')
-            ->references('id_places')
-            ->on('places')
-            ->onDelete('cascade');
-
-            $table->timestamps();
-
-        });
-      
-
+        
         Schema::create('categories', function (Blueprint $table) {
             $table->increments("id_categorie");
             $table->string('name_categorie')->nullable();
             $table->string('photo_categories')->nullable();
             $table->timestamps();
-
+            
         });
-      
-
+        
+        
         Schema::create('places', function (Blueprint $table) {
             $table->increments("id_places")->nullable();
             $table->string('nom_place')->nullable();
@@ -57,6 +43,19 @@ return new class extends Migration
         });
 
       
+        Schema::create('galerie', function (Blueprint $table) {
+            $table->increments("id_galerie");
+            $table->string("photos_place")->nullable(); //Unique key
+            $table->string("videos_place")->nullable(); //Unique key
+            $table->unsignedInteger("id_place")->nullable(); //Unique key
+            $table->foreign('id_place')
+            ->references('id_places')
+            ->on('places')
+            ->onDelete('cascade');
+        
+            $table->timestamps();
+        
+        });
     }
 
     /**
