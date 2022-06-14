@@ -28,6 +28,7 @@ class tempuratureController extends Controller
                "name" =>$data['name'],
                "wind"=>$data['wind']['speed']
             ]
+         
 
             );
          }

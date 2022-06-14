@@ -4,7 +4,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo/1.png" class="img-fluid" alt="The Adevnto Logo Image">
+                        <img src="{{asset('assets/images/logo/1.png')}}" class="img-fluid" alt="The Adevnto Logo Image">
                     </a>
                 </div>
             </div>

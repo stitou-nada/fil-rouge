@@ -1,7 +1,7 @@
 @extends('pages.principal')
 @section('content')
 
-<section style="background-image: url('assets/images/img-about/17.jpg');" class="padding trmain-slider" id="TripPlanner">
+<section style="background-image: url('assets/images/img-about/17.jpg');padding-top:300px;" class="padding trmain-slider" id="TripPlanner">
             
     <div  class="container trtop-baner-content">
         <div  class="row">
@@ -10,7 +10,7 @@
                     <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">les suggestions<br>
                         des endroits touristiques à Tanger.</h1>
                         <p style=" padding-right: 250px !important;
-                        padding-left: 300px !important;padding-top: 50px;" class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">Une ville portuaire embrassée par la mer et l'océan
+                        padding-left: 300px !important;" class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">Une ville portuaire embrassée par la mer et l'océan
                             Un lieu de rencontre pour trois cultures - africaine, marocaine et européenne
                          </p>
                         <!-- <form class="tr-slider-form wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
@@ -32,7 +32,7 @@
     <div class="card card-weather">
       <div class="card-body">
         <div class="weather-date-location">
-          <h3>{{$name}}</h3>
+          {{-- <h3>{{$name}}</h3> --}}
           <p class="text-gray">
             <span class="weather-date">25 March, 2019</span>
             <span class="weather-location">Sydney, Australia</span>
@@ -137,9 +137,9 @@
         
     
     <div class="tr-image-class">
-        <img src="assets/images/categorie/{{$value->photo_categorie}}" class="img-fluid"
-             alt="">
-        <div class="trCategoryButton"><a href="javascript:void(0);">{{$value->name_categorie}}</a> </div>
+      <a href="/endroit/{{$value->id_categorie}}">  <img  src="assets/images/categorie/{{$value->photo_categorie}}" class="img-fluid"
+             alt=""></a>
+        <div class="trCategoryButton"><a href="/endroit/{{$value->id_categorie}}">{{$value->name_categorie}}</a> </div>
     </div>
 </div>
 @empty
