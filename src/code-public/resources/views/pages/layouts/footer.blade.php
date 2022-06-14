@@ -12,7 +12,7 @@
                 <div class="col-12 col-md-12 col-lg-5">
                     <div class="trFooter-logo">
                          <a href="index.html">
-                            <img src="assets/images/logo/1.png" class="img-fluid" alt="the logo image | Footer Adventure Logo">
+                            <img src="{{asset('assets/images/logo/1.png')}}" class="img-fluid" alt="the logo image | Footer Adventure Logo">
                         </a>
                         <p class="trFooter-desc">Tanger est une ville du nord du Maroc, considérée comme la capitale marocaine du 
                             détroit de Gibraltar et la porte d'entrée du continent africain.</p>

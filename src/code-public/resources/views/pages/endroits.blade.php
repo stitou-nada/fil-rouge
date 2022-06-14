@@ -6,7 +6,7 @@ foreach($places as $value){}
 
 @endphp
 
-<section style="padding-top: 300px ;  max-width: 100% 100%;yy  background-repeat: no-repeat ; background-image: url('{{asset('assets/images/categorie')}}/{{$value->photo_categorie}} " class="padding trmain-slider"
+<section style="padding-top: 300px ;  background-size:  100% 100%; background-repeat: no-repeat ; background-image: url('{{asset('assets/images/categorie')}}/{{$value->photo_categorie}} " class="padding trmain-slider"
     id="TripPlanner">
 
     <div class="container trtop-baner-content">
@@ -36,7 +36,7 @@ foreach($places as $value){}
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
+    
 </section>
 <section class="padding position-relative margin-top parallax parallax-image-2">
     <div class="container">
