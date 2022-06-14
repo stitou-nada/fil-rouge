@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\placesController;
+use App\Http\Controllers\tempuratureController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/endroits', function (){
+    return view('pages.endroits');
 });
 
 
+//  route::get('/index',[placesController::class,'afficher_categories','tempurature']);
+//   route::get('/index',[tempuratureController::class,'fetch_API']);
 
-route::get('/index',[placesController::class,'afficher_categories']);
-route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
+
+    // route::get('/indexx',[placesController::class,'afficher_categories'])->name('index');
+    // route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
+
+
+
+// route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
