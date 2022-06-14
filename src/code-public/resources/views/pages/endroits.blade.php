@@ -99,9 +99,7 @@ foreach($places as $value){}
                                             class="icon material-icons-star_half"></span></div><a
                                         class="product-big-reviews" href="#">4 customer reviews</a>
                                 </div>
-                                <p class="product-big-text">Les Grottes d'Hercule sont des cavernes naturelles situées à
-                                    une dizaine de kilomètres de Tanger, au Maroc, à l'entrée atlantique du détroit de
-                                    Gibraltar....</p><a class="button button-black-outline button-ujarak"
+                                <p class="product-big-text">{{$value->description_place}}</p><a class="button button-black-outline button-ujarak"
                                     href="typography-1.html">plus d'informations</a>
                             </div>
                         </div>

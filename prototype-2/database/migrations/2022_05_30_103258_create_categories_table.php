@@ -20,7 +20,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments("id_categorie");
             $table->string('name_categorie')->nullable();
-            $table->string('photo_categories')->nullable();
+            $table->string('photo_categorie')->nullable();
             $table->timestamps();
             
         });
@@ -33,8 +33,8 @@ return new class extends Migration
             $table->string('video_place')->nullable();
             $table->string('description_place')->nullable();
             $table->string('tumperature_place')->nullable();
-            $table->timestamps();
             $table->unsignedInteger("id_categorie")->nullable(); //Unique key
+            $table->timestamps();
             $table->foreign('id_categorie')
             ->references('id_categorie')
             ->on('categories')
