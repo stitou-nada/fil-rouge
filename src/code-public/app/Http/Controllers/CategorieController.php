@@ -24,4 +24,12 @@ class CategorieController extends Controller
          
           return view("pages.endroits",compact("categories"));
       }
+    function afficher_categories_gallery(){
+
+        $categories=  DB::table('categories')
+          ->select("*")
+          ->get();
+         
+          return view("pages.galeries",compact("categories"));
+      }
 }

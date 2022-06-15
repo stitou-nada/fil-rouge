@@ -24,7 +24,7 @@
                         <ul class="navbar-nav mr-auto align-self-center">
                             <li class="nav-item tr-nav-item"><a class="nav-link" href="#TripPlanner">Accueil</a>
                             </li>
-                            <li class="nav-item tr-nav-item"><a class="nav-link" href="#Clients">Météo</a>
+                            <li class="nav-item tr-nav-item"><a class="nav-link" href="#meteo">Météo</a>
                             </li>
                             <li class="nav-item tr-nav-item"><a class="nav-link" href="#Destination">À-propos </a>
                             </li>

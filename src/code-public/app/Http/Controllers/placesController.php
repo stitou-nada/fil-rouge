@@ -30,10 +30,39 @@ class placesController extends Controller
 
       }
 
+    
+       
+    
+        
+      function afficher_places_gallery($id,$id_c){
+  
+        $places = DB::table('places')
+        ->select('*')
+        ->where("places.id_categorie",$id)
+        ->join("categories","places.id_categorie",'=',"categories.id_categorie")
+        ->get();
+        return view('pages.endroits',compact("categories","places")); 
+
+       
+    
+        $galerie = DB::table('galerie')
+        ->where("places.id_categorie",$id)
+        ->where("places.id_categorie",$id)
+        ->select('*')
+        ->join("places","galerie.id_place",'=',"places.id_places")
+        ->get();
+        return view('pages.exercices-de-jour',compact("places","galerie"));
+    
+
+
+      }
    
+     
+    }
+
     
   
   
     
   
-}
+

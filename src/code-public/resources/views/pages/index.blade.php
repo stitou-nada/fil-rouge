@@ -1,10 +1,10 @@
 @extends('pages.principal')
 @section('content')
 
-<section style="background-image: url('assets/images/img-about/17.jpg');padding-top:300px;" class="padding trmain-slider" id="TripPlanner">
-            
+
+ <section style="background-image: url('assets/images/img-about/17.jpg');padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
     <div  class="container trtop-baner-content">
-        <div  class="row">
+       <div  class="row">
             <div class="col-12 col-sm-11 col-md-9 col-lg- col-xl-12">
                 <div class="siider-content">
                     <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">les suggestions<br>
@@ -22,8 +22,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}} --}}
    <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
+  
 </section>
 </div>
 <br>
