@@ -6,7 +6,7 @@ foreach($places as $value){}
 
 @endphp --}}
 
-<section class="padding position-relative margin-top parallax parallax-image-2">
+{{-- <section class="padding position-relative margin-top parallax parallax-image-2">
     <div class="container">
         <!-- HEADING TITLE -->
         <div class="trheading wow fadeInDown" data-wow-duration="2s" data-wow-delay=".4s">
@@ -37,29 +37,62 @@ foreach($places as $value){}
         <img src="assets/images/background-shape/round-shape.png" class="img-fluid" alt="the background round shape | with Animation">
     </div>
     <!--End shape-four -->
-</section>
-
+</section> --}}
 <p class="text-center categorie">Center aligned text on all viewport sizes.</p>
 <p class="text-sm-center">Center aligned text on viewports sized SM (small) or wider.</p>
 <p class="text-md-center">Center aligned text on viewports sized MD (medium) or wider.</p>
 <p class="text-lg-center">Center aligned text on viewports sized LG (large) or wider.</p>
 <p class="text-xl-center">Center aligned text on viewports sized XL (extra-large) or wider.</p>
+<html>
+<body>
+	<div id="fb-root"></div>
+	<!-- <div id="fork-this">
+		<a href="https://github.com/brutaldesign/swipebox"></a>
+	</div> -->
 
-<div class="row flex">
+	
+	<section id="exemple" class="container">
+		<div class="wrap">
+			<div id="try"></div>
+			<ul id="box-container">
+				<li class="box">
+					<a href="{{asset('demo/images/big-1.jpg')}}" class="swipebox" title="Fog" rel="gallery">
+						<img src="{{asset('demo/images/small-1.jpg')}}" alt="image">
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+	
+	<script src="{{asset('lib/jquery-3.5.1.min.js')}}"></script>
+	<script src="{{asset('rc/js/jquery.swipebox.js')}}"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
 
+			/* Basic Gallery */
+			$( '.swipebox' ).swipebox();
 			
-    <div class="col-lg-6 col-sm-4">
-        <div class="thumbnail">
-            <img src="https://source.unsplash.com/8oydDuX4AAM">
-        </div>
-    </div>
-    <div class="col-lg-6 col-sm-4">
-        <div class="thumbnail">
-            <img src="https://source.unsplash.com/PN_c3RKCVlA">
-        </div>
-    </div>
+			/* Video */
+			$( '.swipebox-video' ).swipebox();
 
-</div>
+			/* Dynamic Gallery */
+			$( '#gallery' ).on( 'click', function( e ) {
+				e.preventDefault();
+				$.swipebox( [
+					{ href : 'demo/images/big-1.jpg', title : 'My Caption' },
+					{ href : 'demo/images/big-2.jpg', title : 'My Second Caption' }
+				] );
+			} );
+
+			/* Smooth scroll */
+			$( '.scroll' ).on( 'click', function () {
+				$( 'html, body' ).animate( { scrollTop: $( $( this ).attr('href') ).offset().top - 15 }, 750 ); // Go
+				return false;
+			});
+      } );
+	</script>
+</body>
+</html>
  
 
 <section class="section section-sm bg-default">

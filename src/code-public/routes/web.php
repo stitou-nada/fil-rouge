@@ -16,25 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/endroits', function (){
-    return view('pages.endroits');
+Route::get('/ga', function (){
+    return view('pages.ga');
 });
-// Route::get('/galeries', function (){
-//     return view('pages.galeries');
-// });
-
-
-//  route::get('/index',[placesController::class,'afficher_categories','tempurature']);
-//   route::get('/index',[tempuratureController::class,'fetch_API']);
 
 
     route::get('/index',[CategorieController::class,'afficher_categories_index']);
-    route::get('/galeries',[CategorieController::class,'afficher_categories_gallery']);
-    // route::get('/endroit',[CategorieController::class,'afficher_categories_endroit']);
-    // route::get('/endroit',[placesController::class,'afficher_categories']);
+    // route::get('/galeries',[CategorieController::class,'afficher_categories_gallery']);
     route::get('/endroit/{id}',[placesController::class,'afficher_places_id']);
+    route::get('/galeries/{id}',[placesController::class,'afficher_places_gallery']);
+
     // route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
 
 
 
-// route::get('/categorie/{id}',[placesController::class,'afficher_categories']);
+

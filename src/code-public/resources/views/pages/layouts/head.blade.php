@@ -29,5 +29,30 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 <!-- fin css akhor -->
+
+
+{{-- galerie --}}
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="A touchable jQuery lightbox plugin for desktop, mobile and tablet" />
+	<meta property="og:site_name" content="Swipebox" />
+	<meta property="og:url" content="http://brutaldesign.github.com/swipebox/" />
+	<meta property="og:image" content="http://swipebox.csag.co/images/swipe250.jpg" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Swipebox | A touchable jQuery lightbox" />
+	<meta property="og:description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
+	<meta itemprop="name" content="Swipebox | A touchable jQuery lightbox">
+	<meta itemprop="image" content="http://swipebox.csag.co/images/swipe250.jpg">
+	<meta itemprop="description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{asset('demo/normalize.css')}}">
+	<link rel="stylesheet" href="{{asset('demo/bagpakk.min.css')}}">
+	<link rel="stylesheet" href="{{asset('demo/style.css')}}">
+	<link rel="stylesheet" href="{{asset('src/css/swipebox.css')}}"> 	
+	<title>Swipebox | A Touchable jQuery Lightbox</title>
+
+{{-- end galerie --}}
     <title>Advento - landing page</title>
 </head>

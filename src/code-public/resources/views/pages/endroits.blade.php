@@ -100,7 +100,7 @@ foreach($places as $value){}
                                         class="product-big-reviews" href="#">4 customer reviews</a>
                                 </div>
                                 <p class="product-big-text">{{$value->description_place}}...</p><a class="button button-black-outline button-ujarak"
-                                    href="typography-1.html">plus d'informations</a>
+                                    href="/galeries/{{$value->id_places}}">plus d'informations</a>
                             </div>
                         </div>
                     </div>
