@@ -34,7 +34,7 @@
 {{-- galerie --}}
 
 
-	<meta charset="UTF-8">
+	{{-- <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content="A touchable jQuery lightbox plugin for desktop, mobile and tablet" />
 	<meta property="og:site_name" content="Swipebox" />
@@ -51,7 +51,7 @@
 	<link rel="stylesheet" href="{{asset('demo/bagpakk.min.css')}}">
 	<link rel="stylesheet" href="{{asset('demo/style.css')}}">
 	<link rel="stylesheet" href="{{asset('src/css/swipebox.css')}}"> 	
-	<title>Swipebox | A Touchable jQuery Lightbox</title>
+	<title>Swipebox | A Touchable jQuery Lightbox</title> --}}
 
 {{-- end galerie --}}
     <title>Advento - landing page</title>

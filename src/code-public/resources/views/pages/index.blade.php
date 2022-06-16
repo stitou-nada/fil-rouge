@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-    </div> --}} --}}
+    </div> 
    <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
   
 </section>

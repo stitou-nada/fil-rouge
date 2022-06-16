@@ -1,139 +1,117 @@
 @extends('pages.principal')
 @section('content')
-
-{{-- @php
-foreach($places as $value){}
-
-@endphp --}}
-
-{{-- <section class="padding position-relative margin-top parallax parallax-image-2">
-    <div class="container">
-        <!-- HEADING TITLE -->
-        <div class="trheading wow fadeInDown" data-wow-duration="2s" data-wow-delay=".4s">
-            <h2 id="categorie">selectionné<br>
-                categorie</h2>
+<div id="fb-root"></div>
+<!-- <div id="fork-this">
+    <a href="https://github.com/brutaldesign/swipebox"></a>
+</div> -->
+@php
+foreach($galerie as $valuee){}
+@endphp
+<section style="background-repeat: no-repeat ;  background-size:  100% 100%; ; background-image: url({{asset('assets/images/places')}}/{{$valuee->photo_place}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
+    <div  class="container trtop-baner-content">
+       <div  class="row">
+            <div class="col-12 col-sm-3 col-md-3 col-lg- col-xl-12">
+                <div class="siider-content">
+                   
+                    <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">{{$valuee->nom_place}}<br>
+                       </h1>
+                        
+                        <!-- <form class="tr-slider-form wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+                            <div class="form-group position-relative mb-0">
+                            <button type="submit" class="btn btn-primary ">Search</button>
+                            
+                        </div>
+                    </form> -->
+                </div>
+            </div>
         </div>
-        <!-- start image content -->
-        
-    <!-- start image content -->
-     <div class="slider category-slider">
-        @forelse ($categories as $value)
-    <div class="trCategoryItem">
-            
-        
-        <div class="tr-image-class">
-          <a href="/endroit/{{$value->id_categorie}}">  <img  src="assets/images/categorie/{{$value->photo_categorie}}" class="img-fluid"
-                 alt=""></a>
-            <div class="trCategoryButton"><a href="/endroit/{{$value->id_categorie}}">{{$value->name_categorie}}</a> </div>
-        </div>
-    </div>
-    @empty
-            
-        @endforelse
-    </div>
-    </div>
-    <!-- shape-four -->
-    <div class="shape-image-four">
-        <img src="assets/images/background-shape/round-shape.png" class="img-fluid" alt="the background round shape | with Animation">
-    </div>
-    <!--End shape-four -->
-</section> --}}
-<p class="text-center categorie">Center aligned text on all viewport sizes.</p>
-<p class="text-sm-center">Center aligned text on viewports sized SM (small) or wider.</p>
-<p class="text-md-center">Center aligned text on viewports sized MD (medium) or wider.</p>
-<p class="text-lg-center">Center aligned text on viewports sized LG (large) or wider.</p>
-<p class="text-xl-center">Center aligned text on viewports sized XL (extra-large) or wider.</p>
-<html>
-<body>
-	<div id="fb-root"></div>
-	<!-- <div id="fork-this">
-		<a href="https://github.com/brutaldesign/swipebox"></a>
-	</div> -->
+    </div> 
+   <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
+  
+</section>
 
-	
+<br><br>
+@php
+foreach($galerie as $valuee){}
+@endphp
+
+<!-- Grid row -->
+<div class="row text-center">
+
+    <!-- Grid column -->
+    <div class="d-flex justify-content-center">
+    <div class="col-lg-7 col-md-12 mb-4  " >
+
+        <div class="card" class="display-3">
+            <div class="card-body">
+                <h2 class="font-weight-bold deep-orange-lighter-hover mb-3  " >Description</h2>
+                <p class="brown-lighter-hover">{{$valuee->description_place}}</p>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+
+    
+    
+
+</div>
+
+<!--Google map-->
+
+<link rel="stylesheet" href="{{asset('assets/css/ifram.css')}}">
+<div id="map-container-google-3" class="z-depth-1-half map-container-3">
+    <iframe src="https://maps.google.com/maps?q=achakar&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0"
+      style="border:0" allowfullscreen></iframe>
+  </div>
+    <!-- Grid column -->
+
+{{-- end google map --}}
 	<section id="exemple" class="container">
-		<div class="wrap">
+		<div class="wrap col-lg-12">
 			<div id="try"></div>
 			<ul id="box-container">
 				<li class="box">
-					<a href="{{asset('demo/images/big-1.jpg')}}" class="swipebox" title="Fog" rel="gallery">
-						<img src="{{asset('demo/images/small-1.jpg')}}" alt="image">
-					</a>
+                    
+
+                            
+                      
+				
+<div class="container my-5">
+    <div class="row">
+
+
+      
+        
+        
+        <!--Grid column-->
+        @forelse  ($galerie as $value)
+        <div class="col-md-6 mb-4">
+            
+           <div class="bg-image shadow-1-strong rounded">
+             <img src="{{asset('assets/galerie')}}/{{$value->photos_place}}" class="w-100" alt="Sample">
+             <div class="mask" style="background-color: rgba(0, 0, 0, 0)">
+               <div class="d-flex justify-content-center align-items-center h-100">
+                 <p class="text-white mb-0">Can you see me?</p>
+               </div>
+            </div>
+           </div>
+        </div>
+
+        
+        @empty
+            
+        @endforelse
+        
+    </div>
+</div>
 				</li>
 				
 			</ul>
 		</div>
 	
-	<script src="{{asset('lib/jquery-3.5.1.min.js')}}"></script>
-	<script src="{{asset('rc/js/jquery.swipebox.js')}}"></script>
-	<script type="text/javascript">
-	$( document ).ready(function() {
-
-			/* Basic Gallery */
-			$( '.swipebox' ).swipebox();
-			
-			/* Video */
-			$( '.swipebox-video' ).swipebox();
-
-			/* Dynamic Gallery */
-			$( '#gallery' ).on( 'click', function( e ) {
-				e.preventDefault();
-				$.swipebox( [
-					{ href : 'demo/images/big-1.jpg', title : 'My Caption' },
-					{ href : 'demo/images/big-2.jpg', title : 'My Second Caption' }
-				] );
-			} );
-
-			/* Smooth scroll */
-			$( '.scroll' ).on( 'click', function () {
-				$( 'html, body' ).animate( { scrollTop: $( $( this ).attr('href') ).offset().top - 15 }, 750 ); // Go
-				return false;
-			});
-      } );
-	</script>
-</body>
-</html>
- 
-
-<section class="section section-sm bg-default">
-    <div class="container">
-        {{-- @forelse ($places as $value) --}}
-        <div class="row row-sm row-40 row-md-50">
-
-            <div class="col-sm-6 col-md-12 row fadeInRight">
-                <!-- Product Big-->
+	
+        
 
 
-                <article class="product-big">
-                    <div class="unit flex-column flex-md-row align-items-md-stretch">
-                        <div class="unit-left"><a class="product-big-figure" href="#"><img
-                                    src="{{asset('assets/images/places')}}/" alt="" width="600"
-                                    height="366" /></a></div>
-                        <div class="unit-body">
-                            <div class="product-big-body">
-                                <h5 class="product-big-title"><a href="#"></a></h5>
-                                <div class="group-sm group-middle justify-content-start">
-                                    <div class="product-big-rating"><span class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star_half"></span></div><a
-                                        class="product-big-reviews" href="#">4 customer reviews</a>
-                                </div>
-                                <p class="product-big-text">...</p><a class="button button-black-outline button-ujarak"
-                                    href="typography-1.html">plus d'informations</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-
-
-
-        </div>
-       
-    </div>
-</section>
 @endsection

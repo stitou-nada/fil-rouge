@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ga', function (){
-    return view('pages.ga');
-});
+// Route::get('/ga', function (){
+//     return view('pages.galeries');
+// });
 
 
     route::get('/index',[CategorieController::class,'afficher_categories_index']);

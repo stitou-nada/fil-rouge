@@ -117,4 +117,6 @@ foreach($places as $value){}
         @endforelse
     </div>
 </section>
+
+
 @endsection

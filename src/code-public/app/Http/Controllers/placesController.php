@@ -36,6 +36,7 @@ class placesController extends Controller
         ->where("places.id_places",$id)
         ->select('*')
         ->join("places","galerie.id_place",'=',"places.id_places")
+        // ->groupBy('places.id_places')
         ->get();
         return view('pages.galeries',compact("galerie"));
       }
