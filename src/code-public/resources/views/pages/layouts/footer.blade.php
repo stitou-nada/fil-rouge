@@ -83,7 +83,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="Footer-copylink"><span><i class="fas fa-copyright"></i> All Rights Reserved by TRAVEXO I Made with <i class="fas fa-heart" style="color: #210287;"></i>  I 2022</span>
+        <div class="Footer-copylink"><span><i class="fas fa-copyright"></i> All Rights Reserved by solicode <i class="fas fa-heart" style="color: #210287;"></i>  I 2022</span>
         </div>
     </div>
 </footer>
