@@ -52,7 +52,7 @@ class CategorieController extends Controller
         }
        
     //    $photo = $request->input('photo_categorie');
-       $inserte = DB::insert('insert into categories(name_categorie,photo_categorie) value(?,?)',[$nom,$photo]);
+       $inserte = DB::insert('insert into categories(nom_categorie,photo_categorie) value(?,?)',[$nom,$photo]);
       if($inserte){
        return redirect('afficher-categorie');
        

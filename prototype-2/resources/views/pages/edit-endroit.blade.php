@@ -28,7 +28,7 @@
                                         @forelse ($edit as $value)
     
 
-                                        <form method="POST" action="{{route('afficher-endroit.update',$value->id_places)}}" enctype='multipart/form-data'
+                                        <form method="POST" action="{{route('afficher-endroit.update',$value->id_place)}}" enctype='multipart/form-data'
                                             class="tm-edit-product-form">
                                             @method('PUT')
                                             @csrf
@@ -43,12 +43,12 @@
                                             <div class="col-6">
                                                 <label for="cc-exp" class="control-label mb-1">Categorie</label>
                                                 <select name="id_categorie" id="select" class="form-control">                                    
-                                                <option selected value="{{$value->id_categorie}}">{{$value->name_categorie}}</option>
+                                                <option selected value="{{$value->id_categorie}}">{{$value->nom_categorie}}</option>
                                                 
                                                 @forelse ($categorie as $valuee)
                                                      
                                                     
-                                                  <option value="{{$valuee->id_categorie}}">{{$valuee->name_categorie}} </option>
+                                                  <option value="{{$valuee->id_categorie}}">{{$valuee->nom_categorie}} </option>
               
               
                                                   @empty
@@ -57,11 +57,7 @@
                                                 </select>
                                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                             </div>
-                                            <div class="form-group mb-3">
-                                                <label for="description">Temperature</label>
-                                                <input class="form-control validate" rows="3" required
-                                                    name="tumperature_place" value="{{$value->tumperature_place}}">
-                                            </div>
+                                    
                                             <div class="form-group mb-3">
                                                 <label for="description">Description</label>
                                                 <input class="form-control validate" rows="3" required

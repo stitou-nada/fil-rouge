@@ -38,7 +38,7 @@
                                                 <label for="">Name</label>
                                                 <input id="name" name="name_categorie" type="text"
                                                     class="form-control validate" required
-                                                    value="{{$value->name_categorie}}">
+                                                    value="{{$value->nom_categorie}}">
                                             </div>
                                            
             

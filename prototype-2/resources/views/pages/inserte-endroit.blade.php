@@ -38,7 +38,7 @@
                                             <option selected>Select category</option>
                                              @forelse ($categorie as $value)
                                                  
-                                              <option value="{{$value->id_categorie}}">{{$value->name_categorie}} </option>
+                                              <option value="{{$value->id_categorie}}">{{$value->nom_categorie}} </option>
           
           
                                               @empty
@@ -47,15 +47,7 @@
                                             </select>
                                             <span class="help-block" ²  data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="cc-exp" class="control-label mb-1">Temperature</label>
-                                                <input id="cc-exp" name="tumperature_place" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
-                                                    data-val-cc-exp="Please enter a valid month and year" 
-                                                    autocomplete="cc-exp">
-                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label for="cc-exp" class="control-label mb-1">Video</label>

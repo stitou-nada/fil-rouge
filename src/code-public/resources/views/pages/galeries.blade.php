@@ -7,7 +7,7 @@
 @php
 foreach($galerie as $valuee){}
 @endphp
-<section style="background-repeat: no-repeat ;  background-size:  100% 100%; ; background-image: url({{asset('assets/images/places')}}/{{$valuee->photo_place}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
+<section style="background-image: url({{asset('assets/images/places')}}/{{$valuee->photo_place}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
     <div  class="container trtop-baner-content">
        <div  class="row">
             <div class="col-12 col-sm-3 col-md-3 col-lg- col-xl-12">

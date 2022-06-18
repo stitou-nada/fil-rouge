@@ -19,7 +19,7 @@ return new class extends Migration
         
         Schema::create('categories', function (Blueprint $table) {
             $table->increments("id_categorie");
-            $table->string('name_categorie')->nullable();
+            $table->string('nom_categorie')->nullable();
             $table->string('photo_categorie')->nullable();
             $table->timestamps();
             
@@ -27,12 +27,11 @@ return new class extends Migration
         
         
         Schema::create('places', function (Blueprint $table) {
-            $table->increments("id_places")->nullable();
+            $table->increments("id_place")->nullable();
             $table->string('nom_place')->nullable();
             $table->string('photo_place')->nullable();
             $table->string('video_place')->nullable();
             $table->string('description_place')->nullable();
-            $table->string('tumperature_place')->nullable();
             $table->unsignedInteger("id_categorie")->nullable(); //Unique key
             $table->timestamps();
             $table->foreign('id_categorie')
@@ -43,13 +42,13 @@ return new class extends Migration
         });
 
       
-        Schema::create('galerie', function (Blueprint $table) {
+        Schema::create('galeries', function (Blueprint $table) {
             $table->increments("id_galerie");
-            $table->string("photos_place")->nullable(); //Unique key
-            $table->string("videos_place")->nullable(); //Unique key
+            $table->string("photos")->nullable(); //Unique key
+            $table->string("videos")->nullable(); //Unique key
             $table->unsignedInteger("id_place")->nullable(); //Unique key
             $table->foreign('id_place')
-            ->references('id_places')
+            ->references('id_place')
             ->on('places')
             ->onDelete('cascade');
         

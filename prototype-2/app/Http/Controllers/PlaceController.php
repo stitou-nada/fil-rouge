@@ -30,7 +30,7 @@ class PlaceController extends Controller
     public function create()
     {
         $categorie =DB::table('categories')
-        ->select('id_categorie','name_categorie')
+        ->select('id_categorie','nom_categorie')
         ->get();
         return view('pages.inserte-endroit', compact('categorie'));
         
@@ -107,7 +107,6 @@ class PlaceController extends Controller
     {
         $nom = $request->input('nom_place');
         $id_categorie= $request->input('id_categorie');
-        $temperature = $request->input('tumperature_place');
         $description = $request->input('description_place');
         $video = $request->input('video_place');
 
@@ -124,7 +123,7 @@ class PlaceController extends Controller
 
        DB::table('places')
        ->where('id_places',$id)
-       -> update(['nom_place'=>$nom,'id_categorie'=>$id_categorie,'tumperature_place'=> $temperature,'description_place'=>$description ,'video_place'=>$video ,'photo_place'=>$image]); 
+       -> update(['nom_place'=>$nom,'id_categorie'=>$id_categorie,'description_place'=>$description ,'video_place'=>$video ,'photo_place'=>$image]); 
 
 
        return redirect('afficher-endroit');
@@ -139,7 +138,7 @@ class PlaceController extends Controller
     public function destroy($id)
     {
      $inserte=DB::table('places')
-      ->where('id_places',$id)
+      ->where('id_place',$id)
       ->delete();
       if ($inserte) {
          return redirect('afficher-endroit');
