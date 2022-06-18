@@ -33,18 +33,28 @@
     <div class="card card-weather">
       <div class="card-body">
         <div class="weather-date-location">
-          {{-- <h3>{{$name}}</h3> --}}
+          <h3>{{$name}}</h3>
           <p class="text-gray">
-            <span class="weather-date">25 March, 2019</span>
-            <span class="weather-location">Sydney, Australia</span>
+            <span class="weather-date">
+              @php
+              $date = date('d-m-y h:i:s');
+              echo $date;
+            @endphp</span>
           </p>
         </div>
         <div class="weather-data d-flex">
           <div class="mr-auto">
-            <h4 class="display-3">32
+            <h4 class="display-3">{{$temp}}
               <span class="symbol">&deg;</span>C</h4>
             <p>
-              Cloudy
+              @forelse ($description as $value)
+              {{$value['description']}}
+              @empty
+                  
+              @endforelse
+              
+              
+            
             </p>
           </div>
         </div>
@@ -134,13 +144,15 @@
 <!-- start image content -->
  <div class="slider category-slider">
     @forelse ($categories as $value)
+
+
 <div class="trCategoryItem">
         
     
     <div class="tr-image-class">
       <a href="/endroit/{{$value->id_categorie}}">  <img  src="assets/images/categorie/{{$value->photo_categorie}}" class="img-fluid"
              alt=""></a>
-        <div class="trCategoryButton"><a href="/endroit/{{$value->id_categorie}}">{{$value->name_categorie}}</a> </div>
+        <div class="trCategoryButton"><a href="/endroit/{{$value->id_categorie}}">{{$value->nom_categorie}}</a> </div>
     </div>
 </div>
 @empty

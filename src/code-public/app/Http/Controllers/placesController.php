@@ -32,10 +32,10 @@ class placesController extends Controller
    
       function afficher_places_gallery($id){
 
-        $galerie = DB::table('galerie')
-        ->where("places.id_places",$id)
+        $galerie = DB::table('galeries')
+        ->where("places.id_place",$id)
         ->select('*')
-        ->join("places","galerie.id_place",'=',"places.id_places")
+        ->join("places","galeries.id_place",'=',"places.id_place")
         // ->groupBy('places.id_places')
         ->get();
         return view('pages.galeries',compact("galerie"));

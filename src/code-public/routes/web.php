@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-    route::get('/index',[CategorieController::class,'afficher_categories_index']);
+    route::get('/index',[CategorieController::class,'afficher_categories_index'])->name('index');
     // route::get('/galeries',[CategorieController::class,'afficher_categories_gallery']);
     route::get('/endroit/{id}',[placesController::class,'afficher_places_id']);
     route::get('/galeries/{id}',[placesController::class,'afficher_places_gallery']);

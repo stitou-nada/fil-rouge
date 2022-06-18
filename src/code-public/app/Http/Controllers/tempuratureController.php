@@ -20,11 +20,11 @@ class tempuratureController extends Controller
 
 
         function fetch_API(){
-            $data =Http::get("https://api.openweathermap.org/data/2.5/weather?q=TANGER&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b")->json();
-            
+            $data =Http::get("https://api.openweathermap.org/data/2.5/weather?q=TANGER&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric")->json();
+            // api.openweathermap.org/data/2.5/forecast?q=tanger&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b
             return view("pages.index",
             [
-            
+                'temp'=>$data['main']['tomp'],
                "name" =>$data['name'],
                "wind"=>$data['wind']['speed']
             ]

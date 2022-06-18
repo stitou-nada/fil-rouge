@@ -22,7 +22,7 @@ foreach($places as $value){}
                       
                 
                     <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">
-                        {{$value->name_categorie}}<br>
+                        {{$value->nom_categorie}}<br>
                     </h1>
                     
 
@@ -58,7 +58,7 @@ foreach($places as $value){}
                             src="{{asset('assets/images/categorie')}}/{{$value->photo_categorie}}" class="img-fluid"
                             alt=""></a>
                     <div class="trCategoryButton"><a
-                            href="/endroit/{{$value->id_categorie}}">{{$value->name_categorie}}</a> </div>
+                            href="/endroit/{{$value->id_categorie}}">{{$value->nom_categorie}}</a> </div>
                 </div>
             </div>
             @empty
@@ -100,7 +100,7 @@ foreach($places as $value){}
                                         class="product-big-reviews" href="#">4 customer reviews</a>
                                 </div>
                                 <p class="product-big-text">{{$value->description_place}}...</p><a class="button button-black-outline button-ujarak"
-                                    href="/galeries/{{$value->id_places}}">plus d'informations</a>
+                                    href="/galeries/{{$value->id_place}}">plus d'informations</a>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
 @php
 foreach($galerie as $valuee){}
 @endphp
-<section style="background-image: url({{asset('assets/images/places')}}/{{$valuee->photo_place}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
+<section style=" background-size:  100% 100%; background-repeat: no-repeat; background-image: url({{asset('assets/images/galerie')}}/{{$valuee->photos}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
     <div  class="container trtop-baner-content">
        <div  class="row">
             <div class="col-12 col-sm-3 col-md-3 col-lg- col-xl-12">
@@ -89,7 +89,7 @@ foreach($galerie as $valuee){}
         <div class="col-md-6 mb-4">
             
            <div class="bg-image shadow-1-strong rounded">
-             <img src="{{asset('assets/galerie')}}/{{$value->photos_place}}" class="w-100" alt="Sample">
+             <img src="{{asset('assets/galerie')}}/{{$value->photos}}" class="w-100" alt="Sample">
              <div class="mask" style="background-color: rgba(0, 0, 0, 0)">
                <div class="d-flex justify-content-center align-items-center h-100">
                  <p class="text-white mb-0">Can you see me?</p>
