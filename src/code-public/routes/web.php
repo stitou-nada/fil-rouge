@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
     // route::get('/galeries',[CategorieController::class,'afficher_categories_gallery']);
     route::get('/endroit/{id}',[placesController::class,'afficher_places_id']);
     route::get('/galeries/{id}',[placesController::class,'afficher_places_gallery']);
-    route::get('/meteo',[CategorieController::class,'afficher_categories_meteo']);
+    
     
     // route::get('/index',[tempuratureController::class,'fetch_API'])->name('index');
 

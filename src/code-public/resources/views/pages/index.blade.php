@@ -23,114 +23,14 @@
             </div>
         </div>
     </div> 
-   <link rel="stylesheet" href="{{asset('assets/css/meteo.css')}}">
+   
   
 </section>
 </div>
 <br>
-<div class="col-lg-8 grid-margin stretch-card">
     <!--weather card-->
-    <div class="card card-weather">
-      <div class="card-body">
-        <div class="weather-date-location">
-          <h3>{{$name}}</h3>
-          <p class="text-gray">
-            <span class="weather-date">
-              @php
-              $date = date('d-m-y h:i:s');
-              echo $date;
-            @endphp</span>
-          </p>
-        </div>
-        <div class="weather-data d-flex">
-          <div class="mr-auto">
-            <h4 class="display-3">{{$temp}}
-              <span class="symbol">&deg;</span>C</h4>
-            <p>
-              @forelse ($description as $value)
-              {{$value['description']}}
-              @empty
-                  
-              @endforelse
-              
-              
-            
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="card-body p-0">
-        <div class="d-flex weakly-weather">
-          <div class="weakly-weather-item">
-            <p class="mb-0">
-              <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt="">
-            </p>
-            <i class="mdi mdi-weather-cloudy"></i>
-            <p class="mb-0">
-              30&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Mon
-            </p>
-            <i class="mdi mdi-weather-hail"></i>
-            <p class="mb-0">
-              31&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Tue
-            </p>
-            <i class="mdi mdi-weather-partlycloudy"></i>
-            <p class="mb-0">
-              28&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Wed
-            </p>
-            <i class="mdi mdi-weather-pouring"></i>
-            <p class="mb-0">
-              30&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Thu
-            </p>
-            <i class="mdi mdi-weather-pouring"></i>
-            <p class="mb-0">
-              29&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Fri
-            </p>
-            <i class="mdi mdi-weather-snowy-rainy"></i>
-            <p class="mb-0">
-              31&deg;
-            </p>
-          </div>
-          <div class="weakly-weather-item">
-            <p class="mb-1">
-              Sat
-            </p>
-            <i class="mdi mdi-weather-snowy"></i>
-            <p class="mb-0">
-              32&deg;
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--weather card ends-->
-  </div>
-  {{-- start weather --}}
-  <link rel="stylesheet" href="{{asset('assets/weather.css')}}">
+    
+  
 
 <div class="wrapper">
   <div class="box"></div>
@@ -147,15 +47,23 @@
    
 
   </div>
+  {{-- <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt=""> --}}
   
-  <div class="date">Sun&nbsp;&nbsp;&nbsp; 
+  <div class="date">&nbsp;&nbsp;&nbsp; 
     @php echo date("Y-m-d");
   @endphp
   </div>
   <div class="cloud"></div>
-  <div class="temp">-6&deg;C</div>
-  <div class="cond">Snow</div>
-  <div class="loc">Beijing</div>
+  <div class="temp">{{$temp}}&deg;C</div>
+  <div class="cond"> 
+    @forelse ($description as $value)
+    {{$value['description']}}
+    @empty
+        
+    @endforelse
+  </div>
+    
+  <div class="loc">{{$name}}</div>
 </div>
 {{-- end weather --}}
 {{-- categries par tempurature --}}
