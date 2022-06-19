@@ -7,7 +7,11 @@
 @php
 foreach($galerie as $valuee){}
 @endphp
-<section style=" background-size:100% 100%; background-repeat: no-repeat; background-image: url({{asset('assets/images/places')}}/{{$valuee->photos}});padding-top:300px;" class="padding trmain-slider" id="TripPlanner">   
+
+<section style="padding-top: 300px ;  background-size:  100% 100%; background-repeat: no-repeat ; background-image: url('{{asset('assets/images/places')}}/{{$valuee->photo_place}} " class="padding trmain-slider"
+    id="TripPlanner">  
+
+ 
     <div  class="container trtop-baner-content">
        <div  class="row">
             <div class="col-12 col-sm-3 col-md-3 col-lg- col-xl-12">
@@ -62,7 +66,7 @@ foreach($galerie as $valuee){}
 
 <link rel="stylesheet" href="{{asset('assets/css/ifram.css')}}">
 <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-    <iframe src="https://maps.google.com/maps?q=achakar&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0"
+    <iframe src="https://maps.google.com/maps?q={{$valuee->nom_place}}&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0"
       style="border:0" allowfullscreen></iframe>
   </div>
     <!-- Grid column -->

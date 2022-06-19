@@ -63,7 +63,7 @@
         <div class="d-flex weakly-weather">
           <div class="weakly-weather-item">
             <p class="mb-0">
-              Sun
+              <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt="">
             </p>
             <i class="mdi mdi-weather-cloudy"></i>
             <p class="mb-0">
@@ -129,6 +129,58 @@
     </div>
     <!--weather card ends-->
   </div>
+  {{-- start weather --}}
+  <link rel="stylesheet" href="{{asset('assets/weather.css')}}">
+
+<div class="wrapper">
+  <div class="box"></div>
+  <div class="box_inner_shadow"></div>
+  <div class="box_inner"></div>
+  <div class="box_inner_tri_shadow"></div>
+  <div class="box_inner_tri"></div>
+  <div class="location"></div>
+  <div class="mountain1"></div>
+  <div class="mountain2"></div>
+  <div class="tri1"></div>
+  <div class="tri2"></div>
+  <div class="time">
+   
+
+  </div>
+  
+  <div class="date">Sun&nbsp;&nbsp;&nbsp; 
+    @php echo date("Y-m-d");
+  @endphp
+  </div>
+  <div class="cloud"></div>
+  <div class="temp">-6&deg;C</div>
+  <div class="cond">Snow</div>
+  <div class="loc">Beijing</div>
+</div>
+{{-- end weather --}}
+{{-- categries par tempurature --}}
+
+ @if($temp >= 34)
+ @php
+     $categorie_temp =$temperature_haute;
+ @endphp
+
+@else
+@php
+     
+     $categorie_temp =$temperature_basse;
+ @endphp
+
+@endif
+ @forelse ($categorie_temp as $value)
+
+<h1>{{$value->nom_categorie}}</h1> 
+@empty
+
+@endforelse
+
+
+{{-- categries par tempurature --}}
 
 <!--start middle section-->
 <!-- start Experience Travel With Us -->
@@ -143,7 +195,7 @@
     
 <!-- start image content -->
  <div class="slider category-slider">
-    @forelse ($categories as $value)
+    @forelse ($touts_categories as $value)
 
 
 <div class="trCategoryItem">

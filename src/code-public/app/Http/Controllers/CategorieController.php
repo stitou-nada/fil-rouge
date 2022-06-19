@@ -9,33 +9,42 @@ use Illuminate\Support\Facades\Http;
 class CategorieController extends Controller
 {
     
-    function afficher_categories_index(){
+  function afficher_categories_index(){
 
-      $categories=  DB::table('categories')
-        ->select("*")
-        
-        ->get();
-      $data =Http::get("https://api.openweathermap.org/data/2.5/weather?q=TANGER&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric")->json();
-      
-     
-     
-      // api.openweathermap.org/data/2.5/forecast?q=tanger&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b
-      return view("pages.index",
+    $touts_categories=  DB::table('categories')
+      ->select("*")
+      ->get();
+    $temperature_haute=DB::table('categories')
+      ->select("*")
+    ->whereIn('id_categorie', [1, 2])
+    ->get();
+    $temperature_basse=  DB::table('categories')
+      ->select("*")
+      ->whereIn('id_categorie', [2,3,4])
+      ->get();
+    $data =Http::get("https://api.openweathermap.org/data/2.5/weather?q=TANGER&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric")->json();
 
-      [
-        'categories'=>$categories,
-        'temp'=>$data['main']['temp'],
-        'description'=>$data['weather'],
-        "name" =>$data['name'],
-        "wind"=>$data['wind']['speed']
-        ]
-        
-        
-      );
-      
-         
-         
-      }
+
+
+    return view("pages.index",
+
+    [
+      "touts_categories"=>$touts_categories,
+      'temperature_haute'=>$temperature_haute,
+      'temperature_basse'=>$temperature_basse,
+      'temp'=>$data['main']['temp'],
+      'description'=>$data['weather'],
+      "name" =>$data['name'],
+      "wind"=>$data['wind']['speed']
+      ]
+
+
+    );
+
+
+
+    }
+
     function afficher_categories_endroit(){
 
         $categories=  DB::table('categories')
@@ -52,4 +61,28 @@ class CategorieController extends Controller
          
           return view("pages.galeries",compact("categories"));
       }
+
+      function afficher_categories_meteo(){
+        $meteo=DB::table('categories')
+        ->select("*")
+        ->get();
+        $data =Http::get("https://api.openweathermap.org/data/2.5/weather?q=TANGER&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric")->json();
+
+        return view('pages.meteo',
+      
+        [
+          'meteo'=>$meteo,
+          'temp'=>$data['main']['temp'],
+          'description'=>$data['weather'],
+          "name" =>$data['name'],
+          "wind"=>$data['wind']['speed']
+          ]
+      
+      
+      
+      );
+      }
+      
+         
+    
 }
