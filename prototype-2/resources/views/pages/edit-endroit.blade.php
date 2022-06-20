@@ -45,7 +45,7 @@
                                                 <select name="id_categorie" id="select" class="form-control">                                    
                                                 <option selected value="{{$value->id_categorie}}">{{$value->nom_categorie}}</option>
                                                 
-                                                @forelse ($categorie as $valuee)
+                                                @forelse ($place as $valuee)
                                                      
                                                     
                                                   <option value="{{$valuee->id_categorie}}">{{$valuee->nom_categorie}} </option>
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 ">
                                         <div class=" mx-auto">
-                                            <img src="{{asset('img')}}/{{$value->photo_place}}"
+                                            <img src="{{asset('places')}}/{{$value->photo_place}}"
                                                 class="tm-product-img-dummy mx-auto" alt="">
                                         </div>
                                         <div class="custom-file mt-3 mb-3">

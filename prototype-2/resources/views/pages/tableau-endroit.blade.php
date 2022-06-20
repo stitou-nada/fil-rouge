@@ -29,7 +29,7 @@
                         
                   
                     <tr>
-                        <td style="width: 20%"><div class="uImg"><img src="img/{{$value ->photo_place}}" alt="" style="width: 100px"></div></td>
+                        <td style="width: 20%"><div class="uImg"><img src="{{asset('places')}}/{{$value ->photo_place}}" alt="" style="width: 100px"></div></td>
                         <td>{{$value->nom_place}}</td>
                         <td>{{$value->nom_categorie}}</td>
                         <td>{{$value->description_place}}</td>

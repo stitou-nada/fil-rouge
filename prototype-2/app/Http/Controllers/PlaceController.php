@@ -46,7 +46,6 @@ class PlaceController extends Controller
     {
         $nom=$request->input('nom_place');
         $video=$request->input('video_place');
-        $temperature=$request->input('tumperature_place');
         $description=$request->input('description_place');
         $id_categorie=$request->input('id_categorie');
         if($request->hasfile('photo_place'))
@@ -57,7 +56,7 @@ class PlaceController extends Controller
              $file->move('img', $filename);
             $photo = $filename;
          }
-         $inserte = DB::insert('insert into places(nom_place,photo_place,video_place,description_place,tumperature_place,id_categorie) value(?,?,?,?,?,?)',[$nom,$photo,$video,$description,$temperature,$id_categorie]);
+         $inserte = DB::insert('insert into places(nom_place,photo_place,video_place,description_place,id_categorie) value(?,?,?,?,?)',[$nom,$photo,$video,$description,$id_categorie]);
          if($inserte){
           return redirect('afficher-endroit');
           
@@ -85,7 +84,7 @@ class PlaceController extends Controller
     public function edit($id)
     {
       $edit=DB::table('places')
-      ->where('id_places',$id)
+      ->where('id_place',$id)
       ->select('*')
       ->join("categories","places.id_categorie","=",'categories.id_categorie')
       ->get();

@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 ">
                                         <div class=" mx-auto">
-                                            <img src="{{asset('img')}}/{{$value->photo_categorie}}"
+                                            <img src="{{asset('asset/categorie')}}/{{$value->photo_categorie}}"
                                                 class="tm-product-img-dummy mx-auto" alt="">
                                         </div>
                                         <div class="custom-file mt-3 mb-3">

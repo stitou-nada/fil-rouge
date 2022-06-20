@@ -256,4 +256,7 @@
     <!--End shape-eight -->
 </div>
 </section>
+{{-- style meteo --}}
+<link rel="stylesheet" href="{{asset('assets/weather.css')}}">
+
 @endsection

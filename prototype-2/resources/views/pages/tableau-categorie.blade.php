@@ -29,7 +29,7 @@
                 
 
                     <tr>
-                        <td style="width: 20%"><div class="uImg"><img src="img/{{$value->photo_categorie}}" alt="" style="width: 100px"></div></td>
+                        <td style="width: 20%"><div class="uImg"><img src="{{asset('assets/categorie')}}/{{$value->photo_categorie}}" alt="" style="width: 100px"></div></td>
                         <td >{{$value->nom_categorie}}</td>
                         <td style="width: 6%">
                                 {{-- <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
