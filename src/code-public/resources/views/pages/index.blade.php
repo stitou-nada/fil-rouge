@@ -23,50 +23,64 @@
             </div>
         </div>
     </div> 
-   
-  
+    
+    
 </section>
 </div>
 
-    <!--weather card-->
-    
-  <section>
-
- <div class="wrapper">
-  <div class="box"></div>
-  <div class="box_inner_shadow"></div>
-  <div class="box_inner"></div>
-  <div class="box_inner_tri_shadow"></div>
-  <div class="box_inner_tri"></div>
-  <div class="location"></div>
-  <div class="mountain1"></div>
-  <div class="mountain2"></div>
-  <div class="tri1"></div>
-  <div class="tri2"></div>
-  <div class="time">
-   
-
-  </div>
-
-  {{-- <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt=""> --}}
   
-  <div class="date">&nbsp;&nbsp;&nbsp; 
-    @php echo date("Y-m-d");
-  @endphp
-  </div>
-  <div class="cloud"></div>
-  <div class="temp">{{$temp}}&deg;C</div>
-  <div class="cond"> 
-    @forelse ($description as $value)
-    {{$value['description']}}
-    @empty
-        
-    @endforelse
-  </div>
-    
-  <div class="loc">{{$name}}</div>
-</div>
+
 </section>
+
+    <!--start weather-->
+    <section >
+        <div class="container py-5 h-100">
+      
+          <div class="row d-flex  h-100">
+            <div class="col-md-4 col-lg-6 col-xl-4">
+      
+              <div class="card" style="color: #ffffff; border-radius: 35px;background-color: #7e94c0;">
+                <div class="card-body p-4">
+      
+                  <div class="d-flex">
+                    <h6 class="flex-grow-1">{{$name}}</h6>
+                    <h6>@php echo date("Y-m-d");
+                        @endphp</h6>
+                  </div>
+      
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> {{$temp}}&deg;C </h6>
+                    <span class="small" style="color: #ffffff"> 
+                        @forelse ($description as $value)
+                        {{$value['description']}}
+                        @empty
+                       @endforelse
+                    </span>
+                  </div>
+      
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #ffffff;"></i> <span class="ms-1"style="color: #ffffff;"> {{$wind}} km/h
+                        </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #f7f7f7;"></i> <span class="ms-1"style="color: #ffffff;"> {{$humidity}}% </span>
+                      </div>
+                     
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt="">
+
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+      </section>
+  
 {{-- end weather --}}
 {{-- categries par tempurature --}}
 
@@ -257,6 +271,6 @@
 </div>
 </section>
 {{-- style meteo --}}
-<link rel="stylesheet" href="{{asset('assets/weather.css')}}">
+
 
 @endsection

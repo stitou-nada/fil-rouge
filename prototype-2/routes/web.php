@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\Controller;
@@ -34,15 +35,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/tableau-endroit', function () {  
 //     return view('pages.tableau-endroit');
 //     });
-// Route::get('/tableau-categorie', function () {  
-//     return view('pages.tableau-categorie');
-//     });
+Route::get('/', function () {  
+    return view('pages.login');
+    });
 
 
+    route::post('/',[admincontroller::class,'login']);
 // route::get('/afficher',[CategorieController::class,'index']);
    
 Route::resource('afficher-categorie', CategorieController::class);
 Route::resource('afficher-endroit', PlaceController::class);
 Route::resource('afficher-galerie', galerieConrtoller::class);
-
 

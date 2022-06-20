@@ -35,7 +35,9 @@ class CategorieController extends Controller
       'temp'=>$data['main']['temp'],
       'description'=>$data['weather'],
       "name" =>$data['name'],
-      "wind"=>$data['wind']['speed']
+      "wind"=>$data['wind']['speed'],
+      'humidity'=>$data['main']['humidity']
+
       ]
 
 
