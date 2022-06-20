@@ -27,12 +27,12 @@
   
 </section>
 </div>
-<br>
+
     <!--weather card-->
     
-  
+  <section>
 
-<div class="wrapper">
+ <div class="wrapper">
   <div class="box"></div>
   <div class="box_inner_shadow"></div>
   <div class="box_inner"></div>
@@ -47,6 +47,7 @@
    
 
   </div>
+
   {{-- <img src="http://openweathermap.org/img/wn/{{$value['icon']}}@2x.png" alt=""> --}}
   
   <div class="date">&nbsp;&nbsp;&nbsp; 
@@ -65,6 +66,7 @@
     
   <div class="loc">{{$name}}</div>
 </div>
+</section>
 {{-- end weather --}}
 {{-- categries par tempurature --}}
 
