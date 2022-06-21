@@ -10,11 +10,7 @@
                 <div class="siider-content">
                     <h1 class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">les suggestions<br>
                         des endroits touristiques à Tanger.</h1>
-                    <p style=" padding-right: 250px !important;
-                        padding-left: 300px !important;" class="wow fadeInDown" data-wow-duration="1s"
-                        data-wow-delay=".3s">Une ville portuaire embrassée par la mer et l'océan
-                        Un lieu de rencontre pour trois cultures - africaine, marocaine et européenne
-                    </p>
+                   
                     <!-- <form class="tr-slider-form wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
                             <div class="form-group position-relative mb-0">
                             <button type="submit" class="btn btn-primary ">Search</button>

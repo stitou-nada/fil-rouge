@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Tableau des categorie</h1>
+    <h1 class="mt-4">Gestions des categories</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{route('afficher-categorie.create')}}">Ajouter categorie</a></li>
         <li class="breadcrumb-item active">Tables</li>

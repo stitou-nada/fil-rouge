@@ -1,4 +1,4 @@
-/* #183758 *
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -31,20 +31,15 @@
                                                 <input class="form-control" id="inputPassword"  type="password" name="password" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
-                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
-                                            </div>
+                                            
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                               
                                                
                                                     <button class="btn btn-primary">login</button>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
