@@ -53,7 +53,7 @@ class PlaceController extends Controller
              $file = $request->file('photo_place');
              $extenstion = $file->getClientOriginalExtension();
              $filename = time().'.'.$extenstion;
-             $file->move('img', $filename);
+             $file->move('places', $filename);
             $photo = $filename;
          }
          $inserte = DB::insert('insert into places(nom_place,photo_place,video_place,description_place,id_categorie) value(?,?,?,?,?)',[$nom,$photo,$video,$description,$id_categorie]);
@@ -113,7 +113,7 @@ class PlaceController extends Controller
             $file = $request->file('photo_place');
                 $extenstion = $file->getClientOriginalExtension();
                 $filename = time().'.'.$extenstion;
-                $file->move('img', $filename);
+                $file->move('places', $filename);
                 $image = $filename;
              }
            else{

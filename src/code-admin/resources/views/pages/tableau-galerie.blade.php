@@ -31,7 +31,6 @@
                     <tr>
                         <td style="width: 20%"><div class="uImg"><img src="{{asset('assets/galerie')}}/{{$value->photos}}" alt="" style="width: 100px"></div></td>
                         <td >{{$value->nom_place}}</td>
-                        <td >{{$value->photos}}</td>
                         <td style="width: 6%">
                                 {{-- <a href=""><i class="item-action fa fa-eye" data-toggle="modal"
                                         data-target="#labelModal"></i></a> --}}

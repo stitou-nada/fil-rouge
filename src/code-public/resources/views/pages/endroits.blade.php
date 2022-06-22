@@ -92,13 +92,7 @@ foreach($places as $value){}
                             <div class="product-big-body">
                                 <h5 class="product-big-title"><a href="#">{{$value->nom_place}}</a></h5>
                                 <div class="group-sm group-middle justify-content-start">
-                                    <div class="product-big-rating"><span class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star"></span><span
-                                            class="icon material-icons-star_half"></span></div><a
-                                        class="product-big-reviews" href="#">4 customer reviews</a>
-                                </div>
+                                    
                                 <p class="product-big-text">{{$value->description_place}}...</p><a class="button button-black-outline button-ujarak"
                                     href="/galeries/{{$value->id_place}}">plus d'informations</a>
                             </div>

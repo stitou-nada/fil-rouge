@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 19 juin 2022 à 11:13
--- Version du serveur : 10.4.22-MariaDB
--- Version de PHP : 8.1.2
+-- Généré le : mer. 22 juin 2022 à 11:20
+-- Version du serveur : 10.4.24-MariaDB
+-- Version de PHP : 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `file-rouge`
+-- Base de données : `nada`
 --
 
 -- --------------------------------------------------------
@@ -86,7 +86,7 @@ INSERT INTO `galeries` (`id_galerie`, `photos`, `videos`, `id_place`, `created_a
 (3, 'axakar2.jpg', '.', 1, NULL, NULL),
 (4, 'axakar3.jpg', '.', 1, NULL, NULL),
 (5, 'axakar4.jpg', '.', 1, NULL, NULL),
-(6, 'axakar5.jpg', '.', 1, NULL, NULL),
+(6, 'axakar5.jpeg', '.', 1, NULL, NULL),
 (7, 'principal.jpg', '.', 2, NULL, NULL),
 (8, 'ba-kacem1.jpg', '.', 2, NULL, NULL),
 (9, 'ba-kacem2.jpg', '.', 2, NULL, NULL),
@@ -117,7 +117,6 @@ INSERT INTO `galeries` (`id_galerie`, `photos`, `videos`, `id_place`, `created_a
 (34, 'playa municipal6.jpg', '.', 5, NULL, NULL),
 (35, 'playa municipal7.jpg', '.', 5, NULL, NULL),
 (36, 'playa municipal8.jpg', '.', 5, NULL, NULL),
-(37, 'playa municipal9.jpg', '.', 5, NULL, NULL),
 (38, 'playa municipal10.jpg', '.', 5, NULL, NULL),
 (39, 'spartel1.jpg', '.', 9, NULL, NULL),
 (40, 'spartel2.jpg', '.', 9, NULL, NULL),
@@ -214,7 +213,8 @@ INSERT INTO `galeries` (`id_galerie`, `photos`, `videos`, `id_place`, `created_a
 (133, 'Borj En-Naam6.jpg', '.', 27, NULL, NULL),
 (134, 'Borj En-Naam7.jpg', '.', 27, NULL, NULL),
 (135, 'Borj En-Naam8.jfif', '.', 27, NULL, NULL),
-(136, 'Borj En-Naam9.jpg', '.', 27, NULL, NULL);
+(136, 'Borj En-Naam9.jpg', '.', 27, NULL, NULL),
+(137, '1655889344.png', NULL, 25, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -407,7 +407,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT pour la table `galeries`
 --
 ALTER TABLE `galeries`
-  MODIFY `id_galerie` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id_galerie` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
