@@ -271,7 +271,7 @@
                             <div class="trTripContent-image"
                                 style="background: url(assets/images/img-about/1.jpg) no-repeat; background-size: cover;">
                                 <!-- video tag  -->
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Qu_DhpQmWU"
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wVzOB0XpYS4"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
