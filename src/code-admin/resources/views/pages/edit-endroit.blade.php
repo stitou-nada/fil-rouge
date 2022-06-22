@@ -66,7 +66,7 @@
                                             <div class="form-group mb-3">
                                                 <label for="description">Video</label>
                                                 <input class="form-control validate" rows="3" required
-                                                  type="url"  name="video_place" value="{{$value->video_place}}">
+                                                  type="text"  name="video_place" value="{{$value->video_place}}">
                                             </div>
                                            
 

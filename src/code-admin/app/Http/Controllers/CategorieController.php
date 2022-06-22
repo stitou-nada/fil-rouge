@@ -47,7 +47,7 @@ class CategorieController extends Controller
             $file = $request->file('photo_categorie');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('categorie', $filename);
+            $file->move('assets/categorie', $filename);
             // $file->move('../../src/code-public/public/assets/images/places',$filename);
            $photo = $filename;
         }
@@ -104,7 +104,7 @@ class CategorieController extends Controller
         $file = $request->file('photo_categorie');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
-            $file->move('categorie', $filename);
+            $file->move('assets/categorie', $filename);
             $image = $filename;
          }
        else{
@@ -113,7 +113,7 @@ class CategorieController extends Controller
       
       DB::table('categories')
       ->where('id_categorie',$id)
-      ->update(['name_categorie'=>$name, 'photo_categorie'=>$image]);
+      ->update(['nom_categorie'=>$name, 'photo_categorie'=>$image]);
       
       return redirect('afficher-categorie');
 

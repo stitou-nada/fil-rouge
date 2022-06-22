@@ -88,10 +88,10 @@ class PlaceController extends Controller
       ->select('*')
       ->join("categories","places.id_categorie","=",'categories.id_categorie')
       ->get();
-      $categorie = DB::table('categories')
+      $place = DB::table('categories')
         ->select("*")
         ->get();
-      return view('pages.edit-endroit', compact('edit',"categorie"));
+      return view('pages.edit-endroit', compact('edit',"place"));
 
     }
 
@@ -121,7 +121,7 @@ class PlaceController extends Controller
           }
 
        DB::table('places')
-       ->where('id_places',$id)
+       ->where('id_place',$id)
        -> update(['nom_place'=>$nom,'id_categorie'=>$id_categorie,'description_place'=>$description ,'video_place'=>$video ,'photo_place'=>$image]); 
 
 
