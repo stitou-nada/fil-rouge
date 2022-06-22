@@ -74,33 +74,32 @@
                         
                     </div>
                     {{-- categries par tempurature --}}
-                    <link rel="stylesheet" href="{{asset('assets/meteo.css')}}">
+                    
                     
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        @if($temp >= 34)
                         @php
+                           if ($temp >= 34) {
                             $categorie_temp =$temperature_haute;
-                            @endphp
-                            
-                            @else
-                            @php
-                            
+                           }elseif ($temp < 34 && $temp >=29){
+                            $categorie_temp =$touts_categories;
+                           }
+                           else {
                             $categorie_temp =$temperature_basse;
+                           }
+ 
                             @endphp
-                            
-                            @endif
+
                             @forelse ($categorie_temp as $value)
-                            
+
                           <a  type="button" class="btn btn-secondary"
                           href="/endroit/{{$value->id_categorie}}">
                           {{$value->nom_categorie}}
-                          
-                        
+
+
                         </a>
                         @empty
-                        
+
                         @endforelse
-                        
                       </div>
                     {{-- categries par tempurature --}}
                 </div>
@@ -292,5 +291,5 @@
         </section>
         {{-- style meteo --}}
 
-
+        <link rel="stylesheet" href="{{asset('assets/meteo.css')}}">
         @endsection
